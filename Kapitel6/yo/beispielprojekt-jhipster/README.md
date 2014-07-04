@@ -1,0 +1,2 @@
+README for beispielprojekt-jhipster
+==========================

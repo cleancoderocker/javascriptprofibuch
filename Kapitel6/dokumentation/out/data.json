@@ -1,0 +1,58 @@
+{
+    "project": {},
+    "files": {
+        "Album.js": {
+            "name": "Album.js",
+            "modules": {},
+            "classes": {
+                "": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "": {
+            "file": "Album.js",
+            "line": 1,
+            "description": "Konstruktorfunktion für Alben.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "interpret",
+                    "description": "- Der Name des Interpreten.",
+                    "type": "String"
+                },
+                {
+                    "name": "titel",
+                    "description": "- Der Titel des Albums.",
+                    "type": "String"
+                },
+                {
+                    "name": "erscheinungsjahr",
+                    "description": "- Das Erscheinungsjahr des Albums.",
+                    "type": "String"
+                }
+            ]
+        }
+    },
+    "classitems": [
+        {
+            "file": "Album.js",
+            "line": 13,
+            "description": "Getter-Methode für den Titel des Albums.",
+            "return": {
+                "description": "Der Titel des Albums.",
+                "type": "String"
+            },
+            "class": ""
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type\nGetter-Methode für den Titel des Albums.",
+            "line": " Album.js:13"
+        }
+    ]
+}

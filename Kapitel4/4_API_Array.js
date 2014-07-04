@@ -1,0 +1,1 @@
+var elemente = document.getElementsByTagName("div");elemente.forEach(function(element) {    console.log(element);});var elemente = document.getElementsByTagName("div");Array.from(elemente).forEach(function(element) {    console.log(element);});
