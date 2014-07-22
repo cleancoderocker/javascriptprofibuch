@@ -1,15 +1,16 @@
 (function() {
 
-    var erstelleVerbindung = function(server, port, pfad) {
-        var verbindung = {};
-        verbindung.server = server;
-        verbindung.port = port;
-        verbindung.pfad = pfad;
-        return verbindung;
+    function erstellePerson(name, vorname) {
+        return {
+            name: name,
+            vorname: vorname
+        }
     }
 
-    var erstelleVerbindungZuGaliloPress = erstelleVerbindung.bind(null, "http://www.galileocomputing.de/");
-    var verbindung = erstelleVerbindungZuGaliloPress(8080, "/2565");
-    console.log(JSON.stringify(verbindung, null, 2));
+    var erstelleMustermann = erstellePerson.bind(null, 'Mustermann');
+    var max = erstelleMustermann('Max');
+    console.log(max); // { name: 'Mustermann', vorname: 'Max' }
+    var moritz = erstelleMustermann('Moritz');
+    console.log(moritz); // { name: 'Mustermann', vorname: 'Moritz' }
 
 })();

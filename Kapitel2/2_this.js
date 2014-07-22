@@ -1,40 +1,67 @@
-var person = {
-    name: 'Max', // Objektvariable
-    getName: function() {
+(function() {
+    var person = {
+        name: 'Max', // Objektvariable
+        getName: function() {
+            return this.name;
+        }
+    }
+    console.log(person.getName());
+
+    var name = "globaler Name";
+    function getName() {
         return this.name;
     }
-}
-console.log(person.getName());
-
-var name = "globaler Name";
-function getName() {
-    return this.name;
-}
-console.log(getName());
-console.log(getName.bind(person)());
+    console.log(getName());
+    console.log(getName.bind(person)());
 
 
-// 1
-var getPersonName = person.getName;
-console.log(getPersonName());
+    var getPersonName = person.getName;
+    console.log(getPersonName());
+})();
 
-// 2
-var schaltflaeche = {
-    click: function(callback) {
-        callback();
+(function() {
+    name = "globaler Name";
+    function getGlobalName() {
+        return this.name;
     }
-}
-var controller = {
-    clickHandler: function() {
-        this.log();
-    },
-    log: function() {
-        console.log("clicked");
+    console.log(getGlobalName());
+})();
+
+(function() {
+    "use strict";
+    name = "globaler Name";
+    function getGlobalName() {
+        return this.name;
     }
-}
-schaltflaeche.click(controller.clickHandler);
-schaltflaeche.click(controller.clickHandler.bind(controller));
+    // console.log(getGlobalName());
+    var person2 = {
+        name : 'Moritz',
+        getName : getGlobalName
+    }
 
-// 3
+    var wuestenrockKoenige = {
+        name : 'Kyuss',
+        getName : getGlobalName
+    }
+    console.log(person2.getName()); // Ausgabe: Moritz
+    console.log(wuestenrockKoenige.getName()); // Ausgabe: Kyuss
 
-// 4
+})();
+
+(function() {
+    var band = {
+        name: 'Kyuss',
+        callback: null,
+        newAlbum: function(title) {
+            this.callback(title);
+        }
+    }
+    var person = {
+        name: 'Max',
+        kaufen: function(title) {
+            console.log(this.name + ' kauft sich das neue Album "' + title + '"');
+        }
+    }
+    band.callback = person.kaufen;
+    band.newAlbum('Sky Valley');
+})();

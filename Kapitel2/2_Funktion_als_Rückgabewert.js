@@ -30,6 +30,11 @@
     console.log(division(2, 2));
     var nichts = operationenFabrik('nichts');
     console.log(nichts(2, 2));
+    console.log(operationenFabrik('addition')(2,2));
+    console.log(operationenFabrik('subtraktion')(2,2));
+    console.log(operationenFabrik('multiplikation')(2,2));
+    console.log(operationenFabrik('division')(2,2));
+    console.log(operationenFabrik('nichts')(2,2));
 })();
 
 (function() {

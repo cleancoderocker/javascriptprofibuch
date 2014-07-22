@@ -1,9 +1,9 @@
 (function() {
 
     function gebeNamenAus() {
-        Array.prototype.forEach.apply(arguments, [function(argument) {
+        Array.prototype.forEach.call(arguments, function(argument) {
             console.log(argument);
-        }]);
+        });
     }
     gebeNamenAus('Max', 'Moritz');
 

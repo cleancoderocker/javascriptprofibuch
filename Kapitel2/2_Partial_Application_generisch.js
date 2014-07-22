@@ -9,19 +9,19 @@ console.log("Partielle Auswertung von links");
         };
     }
 
-    var quaderFlaeche = function(x, y, z) {
+    var volumen = function(x, y, z) {
         return x * y * z;
     }
 
-    var quaderFlaecheX5 = partial(quaderFlaeche, 5);
+    var volumenX5 = partial(volumen, 5);
 
-    console.log(quaderFlaecheX5(2, 2));
-    console.log(quaderFlaecheX5(3, 3));
-    console.log(quaderFlaecheX5(4, 4));
-    console.log(quaderFlaecheX5(5, 5));
+    console.log(volumenX5(2, 2));
+    console.log(volumenX5(3, 3));
+    console.log(volumenX5(4, 4));
+    console.log(volumenX5(5, 5));
 
-    var quaderFlaecheX5Y5 = partial(quaderFlaeche, 5, 5);
-    console.log(quaderFlaecheX5Y5(5));
+    var volumenX5Y5 = partial(volumen, 5, 5);
+    console.log(volumenX5Y5(5));
 })();
 
 // Partielle Auswertung von links
@@ -36,19 +36,19 @@ console.log("Partielle Auswertung von links");
         };
     }
 
-    function quaderFlaeche(x, y, z) {
+    function volumen(x, y, z) {
         return x * y * z;
     }
 
-    var quaderFlaecheX5 = partial(quaderFlaeche, 5);
+    var volumenX5 = partial(volumen, 5);
 
-    console.log(quaderFlaecheX5(2, 2));
-    console.log(quaderFlaecheX5(3, 3));
-    console.log(quaderFlaecheX5(4, 4));
-    console.log(quaderFlaecheX5(5, 5));
+    console.log(volumenX5(2, 2));
+    console.log(volumenX5(3, 3));
+    console.log(volumenX5(4, 4));
+    console.log(volumenX5(5, 5));
 
-    var quaderFlaecheX5Y5 = partial(quaderFlaeche, 5, 5);
-    console.log(quaderFlaecheX5Y5(5));
+    var volumenX5Y5 = partial(volumen, 5, 5);
+    console.log(volumenX5Y5(5));
 
     function erstellePerson(name, vorname) {
         return {
@@ -58,8 +58,11 @@ console.log("Partielle Auswertung von links");
     }
 
     var erstelleMustermann = partial(erstellePerson, 'Mustermann');
-    console.log(erstelleMustermann('Max'));
-    console.log(erstelleMustermann('Moritz'));
+    var max = erstelleMustermann('Max');
+    console.log(max); // { name: 'Mustermann', vorname: 'Max' }
+    var moritz = erstelleMustermann('Moritz');
+    console.log(moritz); // { name: 'Mustermann', vorname: 'Moritz' }
+
 })();
 
 // Partielle Auswertung von links mit ES6
@@ -73,19 +76,19 @@ console.log("Partielle Auswertung von links mit ES6");
         };
     }
 
-    function quaderFlaeche(x, y, z) {
+    function volumen(x, y, z) {
         return x * y * z;
     }
 
-    var quaderFlaecheX5 = partial(quaderFlaeche, 5);
+    var volumenX5 = partial(volumen, 5);
 
-    console.log(quaderFlaecheX5(2, 2));
-    console.log(quaderFlaecheX5(3, 3));
-    console.log(quaderFlaecheX5(4, 4));
-    console.log(quaderFlaecheX5(5, 5));
+    console.log(volumenX5(2, 2));
+    console.log(volumenX5(3, 3));
+    console.log(volumenX5(4, 4));
+    console.log(volumenX5(5, 5));
 
-    var quaderFlaecheX5Y5 = partial(quaderFlaeche, 5, 5);
-    console.log(quaderFlaecheX5Y5(5));
+    var volumenX5Y5 = partial(volumen, 5, 5);
+    console.log(volumenX5Y5(5));
 
     function erstellePerson(name, vorname) {
         return {
@@ -112,17 +115,17 @@ console.log("Partielle Auswertung von rechts");
         };
     }
 
-    function quaderFlaeche(x, y, z) {
+    function volumen(x, y, z) {
         console.log("x: " + x + ", y: " + y + ", z: " + z);
         return x * y * z;
     }
 
-    var quaderFlaecheZ5 = partialRight(quaderFlaeche, 5);
+    var volumenZ5 = partialRight(volumen, 5);
 
-    console.log(quaderFlaecheZ5(2, 2));
-    console.log(quaderFlaecheZ5(3, 3));
-    console.log(quaderFlaecheZ5(4, 4));
-    console.log(quaderFlaecheZ5(5, 5));
+    console.log(volumenZ5(2, 2));
+    console.log(volumenZ5(3, 3));
+    console.log(volumenZ5(4, 4));
+    console.log(volumenZ5(5, 5));
 
 })();
 
@@ -148,17 +151,17 @@ console.log("Partielle Auswertung für beliebige Parameter");
         };
     };
 
-    function quaderFlaeche(x, y, z) {
+    function volumen(x, y, z) {
         console.log("x: " + x + ", y: " + y + ", z: " + z);
         return x * y * z;
     }
 
-    var quaderFlaecheY5 = partialMitPlatzhaltern(quaderFlaeche, _, 5);
+    var volumenY5 = partialMitPlatzhaltern(volumen, _, 5);
 
-    console.log(quaderFlaecheY5(2, 2));
-    console.log(quaderFlaecheY5(3, 3));
-    console.log(quaderFlaecheY5(4, 4));
-    console.log(quaderFlaecheY5(5, 5));
+    console.log(volumenY5(2, 2));
+    console.log(volumenY5(3, 3));
+    console.log(volumenY5(4, 4));
+    console.log(volumenY5(5, 5));
 
 })();
 
@@ -187,16 +190,16 @@ console.log("Partielle Auswertung für beliebige Parameter mit IIFE");
         return partial;
     })();
 
-    function quaderFlaeche(x, y, z) {
+    function volumen(x, y, z) {
         console.log("x: " + x + ", y: " + y + ", z: " + z);
         return x * y * z;
     }
 
-    var quaderFlaecheZ5 = partialMitPlatzhaltern(quaderFlaeche, partialMitPlatzhaltern._, 5);
+    var volumenZ5 = partialMitPlatzhaltern(volumen, partialMitPlatzhaltern._, 5);
 
-    console.log(quaderFlaecheZ5(2, 2));
-    console.log(quaderFlaecheZ5(3, 3));
-    console.log(quaderFlaecheZ5(4, 4));
-    console.log(quaderFlaecheZ5(5, 5));
+    console.log(volumenZ5(2, 2));
+    console.log(volumenZ5(3, 3));
+    console.log(volumenZ5(4, 4));
+    console.log(volumenZ5(5, 5));
 
 })();

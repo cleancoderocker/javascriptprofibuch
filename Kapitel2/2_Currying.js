@@ -1,9 +1,9 @@
 (function() {
-    function quaderFlaeche(x, y, z) {
+    function volumen(x, y, z) {
         return x * y * z;
     }
 
-    function quaderFlaeche(x) {
+    function volumenCurry(x) {
         return function(y) {
             return function(z) {
                 return x * y * z;
@@ -11,7 +11,7 @@
         }
     }
 
-    console.log(quaderFlaeche(5)(5)(5));
+    console.log(volumenCurry(5)(5)(5));
 
 
     function curry(ersterParameter) {
@@ -34,14 +34,14 @@
         }
     }
 
-    var quaderFlaecheCurried = curry(quaderFlaeche);
-    console.log(quaderFlaecheCurried(5)(5)(5));
+    var volumenCurry = curry(volumen);
+    console.log(volumenCurry(5)(5)(5));
 
-    console.log(curry(quaderFlaeche)(5)(5)(5));
+    console.log(curry(volumen)(5)(5)(5));
 
-    var quaderFlaecheX5 = quaderFlaecheCurried(5);
-    console.log(quaderFlaecheX5(2)(2));
-    console.log(quaderFlaecheX5(3)(3));
-    console.log(quaderFlaecheX5(4)(4));
-    console.log(quaderFlaecheX5(5)(5));
+    var volumenX5 = volumenCurry(5);
+    console.log(volumenX5(2)(2));
+    console.log(volumenX5(3)(3));
+    console.log(volumenX5(4)(4));
+    console.log(volumenX5(5)(5));
 })();
