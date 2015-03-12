@@ -1,0 +1,1 @@
+var meldung = 'Mein Name ist {{name}}';

@@ -1,0 +1,21 @@
+class Person {
+    constructor(vorname, nachname) {
+        this.vorname = vorname;
+        this.nachname = nachname;
+    }
+// Objektmethode
+    toString() {
+        return this.vorname + ' ' + this.nachname;
+    }
+// Statische Methode
+    static beispiel() {
+        return 4711;
+    }
+}
+var max = new Person('Max', 'Mustermann');
+class Mitarbeiter extends Person {
+    constructor(vorname, nachname, mitarbeiterID) {
+        super(vorname, nachname);
+        this.mitarbeiterID = mitarbeiterID;
+    }
+}

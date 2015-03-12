@@ -1,1 +1,0 @@
-let handler = {};function call() {    console.log("call");}function construct() {    console.log("construct");}let proxyFuerFunktion = Proxy.createFunction(handler, call, construct);person.alter = 100;console.log(person.alter); // 100person.alter = 'Mitte 20'; // TypeError
