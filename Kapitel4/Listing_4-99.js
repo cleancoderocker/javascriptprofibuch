@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 // Anlegen eines Arrays der Länge 8
 var zahlen = new Array(8);
 // Füllen der ersten vier Positionen mit dem Wert 1

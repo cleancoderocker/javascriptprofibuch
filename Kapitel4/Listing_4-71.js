@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 let handler = {
     set: function(zielObjekt, eigenschaft, wert) {
         console.log('setze ' + wert + ' für Eigenschaft ' + eigenschaft);

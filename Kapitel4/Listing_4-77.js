@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 var anzahlAlben = new Map();
 anzahlAlben.set('Kyuss', 4);
 anzahlAlben.set('Tool', 6);

@@ -1,0 +1,20 @@
+{
+  "name": "beispielpaket",
+  "version": "1.0.0",
+  "description": "Beispielpaket JavaScript-Buch",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Philip Ackermann",
+  "license": "MIT",
+  "dependencies": {
+    "underscore": "~1.7.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.21.4"
+  }
+}

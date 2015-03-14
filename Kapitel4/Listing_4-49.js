@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 function getBestOfStonerrock() {
     return ['Kyuss', 'QOTSA', 'Unida', 'Vista Chino'];
 }

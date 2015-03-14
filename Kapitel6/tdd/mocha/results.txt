@@ -1,0 +1,16 @@
+
+[0m[0m
+[0m  ArtistRepository[0m
+[0m    #add()[0m
+[2K[0G    [32m  ✓[0m[90m should add the artist and increase the numer of all artists [0m
+[2K[0G    [32m  ✓[0m[90m should add the artist only if it is not already there [0m
+[0m    #clearAll()[0m
+[2K[0G    [32m  ✓[0m[90m should clear all artists [0m
+
+[0m  DownloadManager[0m
+[0m    #download()[0m
+[2K[0G    [32m  ✓[0m[90m should download the content of a text file [0m[31m(2002ms)[0m
+
+
+[92m [0m[32m 4 passing[0m[90m (2s)[0m
+

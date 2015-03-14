@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 var interpreten = new Set();
 interpreten.add('Kyuss');
 interpreten.add('Kyuss');

@@ -1,0 +1,97 @@
+    <section class="suite">
+      <h1>ArtistRepository</h1>
+      <dl>
+        <section class="suite">
+          <h1>#add()</h1>
+          <dl>
+            <dt>should add the artist and increase the number of all artists</dt>
+            <dd><pre><code>var artistRepository = new ArtistRepository();
+artistRepository.add({name : 'Dragontears'});
+artistRepository.add({name : 'Kyuss'});
+assert.equal(artistRepository.getAll().length, 2);</code></pre></dd>
+            <dt>should add the artist only if it is not already there</dt>
+            <dd><pre><code>var artistRepository = new ArtistRepository();
+artistRepository.add({name : 'Kyuss'});
+artistRepository.add({name : 'Kyuss'});
+assert.equal(artistRepository.getAll().length, 1);</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>#clearAll()</h1>
+          <dl>
+            <dt>should clear all artists</dt>
+            <dd><pre><code>var artistRepository = new ArtistRepository();
+artistRepository.add({name : 'Monster Magnet'});
+assert.equal(artistRepository.getAll().length, 1);
+artistRepository.clearAll();
+assert.equal(artistRepository.getAll().length, 0);</code></pre></dd>
+          </dl>
+        </section>
+      </dl>
+    </section>
+    <section class="suite">
+      <h1>ArtistRepository</h1>
+      <dl>
+        <section class="suite">
+          <h1>#add()</h1>
+          <dl>
+            <dt>should add the artist and increase the numer of all artists</dt>
+            <dd><pre><code>var artistRepository = new ArtistRepository();
+artistRepository.add({name : 'Dragontears'});
+artistRepository.add({name : 'Kyuss'});
+artistRepository.should.be.instanceof(ArtistRepository);
+artistRepository.getAll().length.should.eql(2);
+artistRepository.getAll()[0].name.should.eql('Dragontears');
+artistRepository.getAll()[1].name.should.eql('Kyuss');</code></pre></dd>
+          </dl>
+        </section>
+      </dl>
+    </section>
+    <section class="suite">
+      <h1>ArtistRepository</h1>
+      <dl>
+        <section class="suite">
+          <h1>#add()</h1>
+          <dl>
+            <dt>should add the artist and increase the numer of all artists</dt>
+            <dd><pre><code>artistRepository.add({name : 'Dragontears'});
+artistRepository.add({name : 'Kyuss'});
+assert.equal(artistRepository.getAll().length, 2);</code></pre></dd>
+            <dt>should add the artist only if it is not already there</dt>
+            <dd><pre><code>artistRepository.add({name : 'Kyuss'});
+artistRepository.add({name : 'Kyuss'});
+assert.equal(artistRepository.getAll().length, 1);</code></pre></dd>
+          </dl>
+        </section>
+        <section class="suite">
+          <h1>#clearAll()</h1>
+          <dl>
+            <dt>should clear all artists</dt>
+            <dd><pre><code>artistRepository.add({name : 'Monster Magnet'});
+assert.equal(artistRepository.getAll().length, 1);
+artistRepository.clearAll();
+assert.equal(artistRepository.getAll().length, 0);</code></pre></dd>
+          </dl>
+        </section>
+      </dl>
+    </section>
+    <section class="suite">
+      <h1>Adding two artists to the AssertionRepository</h1>
+      <dl>
+        <dt>should add the artist and increase the number of all artists</dt>
+        <dd><pre><code>var artistRepository = new ArtistRepository();
+artistRepository.add({name: 'Dragontears'});
+artistRepository.add({name: 'Kyuss'});
+assert.equal(artistRepository.getAll().length, 2);</code></pre></dd>
+      </dl>
+    </section>
+    <section class="suite">
+      <h1>Adding one artist twice to the AssertionRepository</h1>
+      <dl>
+        <dt>should not add the artist the second time</dt>
+        <dd><pre><code>var artistRepository = new ArtistRepository();
+artistRepository.add({name : 'Kyuss'});
+artistRepository.add({name : 'Kyuss'});
+assert.equal(artistRepository.getAll().length, 1);</code></pre></dd>
+      </dl>
+    </section>

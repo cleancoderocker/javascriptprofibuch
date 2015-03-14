@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 var koordinaten = [
     [2,3,4],
     [5,6,7],

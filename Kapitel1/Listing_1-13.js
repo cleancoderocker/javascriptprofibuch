@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 var v = 5;
 console.log(typeof v); // "number"
 v = 'Hallo';

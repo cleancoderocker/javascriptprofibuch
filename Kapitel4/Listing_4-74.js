@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 let personValidator = {
     set: function(objekt, eigenschaft, wert) {
         if (eigenschaft === 'alter') {

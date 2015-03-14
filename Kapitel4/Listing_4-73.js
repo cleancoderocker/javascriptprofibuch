@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 let profiler = {
     anzahlZugriffe: 0,
     get: function(proxy, name) {

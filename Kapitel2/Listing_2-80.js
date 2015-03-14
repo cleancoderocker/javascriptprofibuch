@@ -20,7 +20,7 @@ function curry(ersterParameter) {
             : funktion.apply(this, parameter);
     }
 }
-var volumenCurry = curry(volumen);
+var volumenCurried = curry(volumen);
 console.log(volumenCurried(5)(5)(5)); // 125
 var volumenX5 = volumenCurried(5);
 console.log(volumenX5(2)(2)); // 20

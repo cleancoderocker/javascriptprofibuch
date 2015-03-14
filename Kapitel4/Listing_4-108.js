@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 let zahlen = [ 1, 2, 3, 4, 5 ];
 zahlen.name = "Zahlen eins bis fünf";
 // for-in-Schleife

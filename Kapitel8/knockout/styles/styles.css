@@ -1,0 +1,12 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    padding: 2em;
+    font: 14px 'Helvetica', Helvetica, Arial, sans-serif;
+    line-height: 1.4em;
+    color: #4d4d4d;
+    margin: 0 auto;
+}

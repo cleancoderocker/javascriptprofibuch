@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 var aktuellerSong = {
     titel: 'Demon Cleaner',
     interpret: 'Kyuss',

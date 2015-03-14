@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 var Logger = {
     info(meldung) {
         console.log(meldung);

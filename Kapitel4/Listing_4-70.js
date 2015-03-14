@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 var zielObjekt = {};
 var handler = {/*...*/}; // Wird gleich implementiert
 var proxy = Proxy(zielObjekt, handler);

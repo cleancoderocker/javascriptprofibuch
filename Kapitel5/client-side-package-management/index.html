@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Clientseitiges Package-Management mit Bower</title>
+    </head>
+    <body>
+        <script src="bower_components/requirejs/require.js"></script>
+        <script>
+            require.config({
+                paths: {
+                    underscore: 'bower_components/underscore/underscore',
+                }
+            });
+            require(['underscore'], function (_) {
+                var namen = ['Max', 'Moritz'];
+                console.log(_.contains(namen, 'Moritz'));
+            });
+        </script>
+    </body>
+</html>

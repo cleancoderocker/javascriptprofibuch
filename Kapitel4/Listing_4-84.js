@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 class Person {
     constructor(vorname, nachname) {
         this.vorname = vorname;

@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 function erstellePerson(name = 'Max', nachname = 'Mustermann') {
     return {
         name: name,

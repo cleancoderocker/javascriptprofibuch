@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 var iterator = interpretenWrapper[Symbol.iterator]();
 console.log(iterator.next()); // {value: 'Monster Magnet', done: false}
 console.log(iterator.next()); // {value: 'Ben Harper', done: false}

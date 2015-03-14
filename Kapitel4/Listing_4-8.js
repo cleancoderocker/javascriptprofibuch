@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 function test() {
     var ergebnis = [];
     for(var i=1; i<11; i++) {

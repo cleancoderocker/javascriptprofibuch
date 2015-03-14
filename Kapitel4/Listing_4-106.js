@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 var name = 'Max Mustermann';
 var meldung = tagFunktion`Mein Name ist ${name}, ich bin ${44} Jahre jung`;
 console.log(meldung); // Mein Name ist Max Mustermann, ich bin 44 Jahre jung

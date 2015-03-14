@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 var zielObjekt = {"name" : "Max"};
 var proxy = Object.create(Object.getPrototypeOf(zielObjekt), {});
 Object.getOwnPropertyNames(zielObjekt).forEach(function(eigenschaft) {

@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 function quadrat() {
     return Array.from(arguments, function(element) {
         return element * element;

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="albums">
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>AngularJS Beispiel</title>
+        <link href="styles/styles.css" rel="stylesheet" type="text/css">
+    </head>
+    <body ng-controller="AlbumController">
+        <table>
+            <thead>
+                <th>Title</th>
+                <th>Artist</th>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="album in albums">
+                    <td><input name="album.title" ng-model="album.title"></td>
+                    <td><input name="album.artist" ng-model="album.artist"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button ng-click="printAlbums()">Print Albums</button>
+        <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
+</html>

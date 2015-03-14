@@ -1,0 +1,24 @@
+{
+  "name": "blanket-grunt",
+  "version": "1.0.0",
+  "description": "Blanket.js Grunt Beispiel",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "blanket": "^1.1.6",
+    "grunt": "^0.4.5",
+    "grunt-mocha-test": "^0.12.2",
+    "mocha": "^2.0.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "codecoverage",
+    "javascript"
+  ],
+  "author": "Philip Ackermann",
+  "license": "MIT"
+}

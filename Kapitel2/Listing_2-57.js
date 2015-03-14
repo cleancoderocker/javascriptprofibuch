@@ -1,3 +1,9 @@
+function plusVier(x) {
+    return x + 4;
+}
+function malSieben(x) {
+    return x * 7;
+}
 var komposition3 = function() {
     var funktionen = arguments;
     return function() {

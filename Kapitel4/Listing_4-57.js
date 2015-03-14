@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 var interpreten = ['Kyuss', 'QOTSA', 'Ben Harper', 'Monster Magnet']
 var iterator = interpreten.values();
 var interpret = iterator.next();

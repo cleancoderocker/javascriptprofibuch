@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 // Datei: logger.js
 export function info(meldung) {
     console.log(meldung);

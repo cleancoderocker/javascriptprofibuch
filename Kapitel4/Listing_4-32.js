@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 function standardNachname() {
     return 'Mustermann';
 }

@@ -4,7 +4,7 @@ var ValidatorModul = (function (modul) {
     modul.ergebnisse = [];
     modul.validiere = function() {
         console.log('Validierung gestartet: ' + format);
-        ergebnisse.push('Test fehlgeschlagen');
+        modul.ergebnisse.push('Test fehlgeschlagen');
     }
     modul.getErgebnisse = function() {
         return ergebnisse;

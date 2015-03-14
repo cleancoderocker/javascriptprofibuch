@@ -20,4 +20,4 @@ var hund = {
     }
 }
 extend(hund, person);
-console.log(hund.getName();
+console.log(hund.getName());

@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 function asynchroneFunktion() {
     var promise = new Promise(
         function(resolve, reject) {

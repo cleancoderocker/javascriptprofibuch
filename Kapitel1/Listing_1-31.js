@@ -1,3 +1,4 @@
+/* Funktioniert nur in Firefox */
 try {
     throw new RangeError();
 } catch (error if error instanceof TypeError) {

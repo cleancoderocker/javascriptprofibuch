@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 var zahlen = [1, 2, 3, 4, 5, 6, 7, 8];
 var iterator = zahlen.keys();
 var index = iterator.next();

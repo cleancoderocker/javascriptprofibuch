@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 var name = 'Max Mustermann';
 function getName() {
     return name;

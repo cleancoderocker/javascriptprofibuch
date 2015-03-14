@@ -1,3 +1,4 @@
+/* Funktioniert nur in ES6 */
 var vorname = Symbol('Vorname'); // Parameter ist optional
 var nachname = Symbol('Nachname'); // Parameter ist optional
 var person = {};

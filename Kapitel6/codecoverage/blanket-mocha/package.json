@@ -1,0 +1,31 @@
+{
+  "name": "blanket-mocha",
+  "version": "1.0.0",
+  "description": "Blanket.js Mocha Beispiel",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "blanket": "^1.1.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "codecoverage",
+    "javascript"
+  ],
+  "author": "Philip Ackermann",
+  "license": "MIT",
+  "config": {
+      "blanket": {
+          "pattern": ["src"],
+          "data-cover-never": "node_modules",
+          "data-cover-reporter-options": {
+              "shortnames": true
+          }
+      }
+  }
+}
