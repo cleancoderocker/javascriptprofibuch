@@ -20,6 +20,9 @@ function Mitarbeiter(name, nachname, mitarbeiterID) {
     this.setMitarbeiterID = function(neueMitarbeiterID) {
         mitarbeiterID = neueMitarbeiterID;
     }
+    this.print = function() {
+      return this.getName() + ' ' + this.getNachname() + ' (' + this.getMitarbeiterID() + ')';
+    };
 }
 var max = new Mitarbeiter('Max', 'Mustermann', 2345);
 max.setName('Moritz');
@@ -29,3 +32,4 @@ console.log(max.mitarbeiterID); // undefined
 console.log(max.getName()); // Moritz
 console.log(max.getNachname()); // Mustermann
 console.log(max.getMitarbeiterID()); // 2345
+console.log(max.print());

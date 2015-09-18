@@ -1,20 +1,20 @@
-var Mitarbeiter = (function() {
-    var _name;
-    var _nachname;
-    var _mitarbeiterID;
-    function Mitarbeiter(name, nachname, mitarbeiterID) {
-        _name = name;
-        _nachname = nachname;
-        _mitarbeiterID = mitarbeiterID;
-    }
-    Mitarbeiter.prototype.getName = function() {
-        return _name;
+var Mitarbeiter = (function () {
+  function Mitarbeiter(name, nachname, mitarbeiterID) {
+    var name = name;
+    var nachname = nachname;
+    var mitarbeiterID = mitarbeiterID;
+    this.getName = function () {
+      return name;
     };
-    Mitarbeiter.prototype.getNachname = function() {
-        return _nachname;
+    this.getNachname = function () {
+      return nachname;
     };
-    Mitarbeiter.prototype.getMitarbeiterID = function() {
-        return _mitarbeiterID;
+    this.getMitarbeiterID = function () {
+      return mitarbeiterID;
     };
-    return Mitarbeiter;
+  }
+  return Mitarbeiter;
 })();
+Mitarbeiter.prototype.print = function () {
+  return this.getName() + ' ' + this.getNachname() + ' (' + this.getMitarbeiterID() + ')';
+};

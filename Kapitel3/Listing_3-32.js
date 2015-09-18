@@ -12,3 +12,6 @@ Mitarbeiter.prototype.getNachname = function() {
 Mitarbeiter.prototype.getMitarbeiterID = function() {
     return this._mitarbeiterID;
 };
+Mitarbeiter.prototype.print = function() {
+  return this.getName() + ' ' + this.getNachname() + ' (' + this.getMitarbeiterID() + ')';
+};
