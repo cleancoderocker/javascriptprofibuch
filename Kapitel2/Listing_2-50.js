@@ -22,9 +22,19 @@ var interpreten = [
         ]
     }
 ];
-var albenAnzahl = interpreten.reduce(
-    function(ergebnis, interpret, index, interpreten) {
-        return ergebnis + interpret.alben.length;
-    },
-    0
-);
+function istNach2000(album) {
+  return album.erscheinungsjahr > 2000;
+}
+function hatAlbumNach2000(interpret) {
+  return interpret.alben.filter(istNach2000).length > 0;
+};
+function alsInterpretenName(interpret) {
+  return interpret.name;
+};
+console.log(interpreten)
+interpreten
+  .filter(hatAlbumNach2000)
+  .map(alsInterpretenName)
+  .forEach((interpret) => {
+    console.log(interpret);
+  });
