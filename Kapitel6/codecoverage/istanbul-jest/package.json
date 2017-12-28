@@ -1,0 +1,26 @@
+{
+  "name": "istanbul-jest",
+  "version": "1.0.0",
+  "description": "Istanbul Jest Beispiel",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "jest": "^22.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverage": true
+  },
+  "keywords": [
+    "codecoverage",
+    "javascript"
+  ],
+  "author": "Philip Ackermann",
+  "license": "MIT"
+}
