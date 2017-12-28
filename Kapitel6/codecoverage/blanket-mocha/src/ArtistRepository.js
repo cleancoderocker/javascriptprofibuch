@@ -15,7 +15,7 @@ ArtistRepository.prototype.contains = function(newArtist) {
         return artist.name === newArtist.name;
     }).length > 0;
 };
-ArtistRepository.prototype.getAll = function(artist) {
+ArtistRepository.prototype.getAll = function() {
     return this.artists;
 };
 ArtistRepository.prototype.clearAll = function() {
