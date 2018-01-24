@@ -8,13 +8,13 @@
         function init() {
             const randomNumber = Math.random();
             return {
-                getRandomNumber: function() {
+                getRandomNumber() {
                     return randomNumber;
                 }
             };
         };
         return {
-            getInstance: function () {
+            getInstance() {
                 if(!instance) {
                     instance = init();
                 }
@@ -31,7 +31,7 @@
     const Singleton = (
         function () {
             return {
-                getInstance: function () {
+                getInstance() {
                     // Die Instanz wird nur einmal initialisiert
                     const instance = function(){
                         const randomNumber = Math.random();
