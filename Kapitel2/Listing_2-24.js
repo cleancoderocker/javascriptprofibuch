@@ -1,7 +1,9 @@
 function addiere(x, y, log) {
-    var ergebnis = x + y;
+    let ergebnis = x + y;
     if(log) {
         console.log(ergebnis);
     }
     return ergebnis;
 }
+addiere(2,2);       // Aufruf ohne Logging
+addiere(2,2,true);  // Aufruf mit Logging
