@@ -1,17 +1,15 @@
 (function() {
-    /* Listing 7.3 */
     var singleton = {};
 })();
 
 (function() {
-    /* Listing 7.4 */
     var Singleton = ( function () {
         var instance;
         function init() {
-            var zufallsZahl = Math.random();
+            var randomNumber = Math.random();
             return {
-                getZufallsZahl: function() {
-                    return zufallsZahl;
+                getRandomNumber: function() {
+                    return randomNumber;
                 }
             };
         };
@@ -26,21 +24,20 @@
     })();
     var s1 = Singleton.getInstance();
     var s2 = Singleton.getInstance();
-    console.log(s1.getZufallsZahl() === s2.getZufallsZahl());
+    console.log(s1.getRandomNumber() === s2.getRandomNumber());
 })();
 
 (function() {
-    /* Listing 7.5 */
     var Singleton = (
         function () {
             return {
                 getInstance: function () {
                     // Die Instanz wird nur einmal initialisiert
                     var instance = function(){
-                        var zufallsZahl = Math.random();
+                        var randomNumber = Math.random();
                         return {
-                            getZufallsZahl : function() {
-                                return zufallsZahl;
+                            getRandomNumber : function() {
+                                return randomNumber;
                             }
                         }
                     }();
@@ -54,5 +51,5 @@
         })();
     var s1 = Singleton.getInstance();
     var s2 = Singleton.getInstance();
-    console.log(s1.getZufallsZahl() === s2.getZufallsZahl());
+    console.log(s1.getRandomNumber() === s2.getRandomNumber());
 })();
