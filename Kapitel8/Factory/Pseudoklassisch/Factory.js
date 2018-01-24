@@ -1,9 +1,9 @@
 (function () {
 
     function Vinyl(config) {
-        this.color = config.color || "schwarz";
-        this.name = config.name || "Untitled";
-        this.artist = config.artist || "VA";
+        this.color = config.color || 'schwarz';
+        this.name = config.name || 'Untitled';
+        this.artist = config.artist || 'VA';
     }
 
     function LP(config) {
@@ -28,10 +28,10 @@
 
     VinylFactory.prototype.create  = function (config) {
         switch(config.vinylType){
-            case "lp":
+            case 'lp':
                 this.vinylClass = LP;
                 break;
-            case "ep":
+            case 'ep':
                 this.vinylClass = EP;
                 break;
         }
@@ -40,14 +40,14 @@
 
     var vinylFactory = new VinylFactory();
     var ep = vinylFactory.create({
-        vinylType: "ep",
-        color: "yellow"
+        vinylType: 'ep',
+        color: 'yellow'
     });
 
     var lp = vinylFactory.create({
-        vinylType: "lp",
-        name: "Third Eye Surgery",
-        artist: "Baby Woodrose"
+        vinylType: 'lp',
+        name: 'Third Eye Surgery',
+        artist: 'Baby Woodrose'
     });
 
     console.log(ep instanceof EP);  // true
