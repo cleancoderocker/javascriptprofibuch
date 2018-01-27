@@ -9,14 +9,14 @@
         }
     }
 
-    function sign(funktion, context) {
-        var price = funktion.call(context);
+    function sign(aFunction, context) {
+        var price = aFunction.call(context);
         return 2 * price;
     }
 
-    function decorate(decorator, funktion, context) {
+    function decorate(decorator, aFunction, context) {
         return function() {
-            return decorator.call(context, funktion, context);
+            return decorator.call(context, aFunction, context);
         }
     }
 

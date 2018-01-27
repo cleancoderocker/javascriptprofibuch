@@ -1,6 +1,6 @@
 (function () {
 
-    var memwatch = require('memwatch');
+    var memwatch = require('memwatch-next');
     var hd = new memwatch.HeapDiff();
 
     function Album(title, year, artist, id, member, price) {
@@ -19,14 +19,15 @@
         albums.push(new Album('Title', 2000, 'Artist', getRandomID(1,10), 'Member' + i, 5.00));
     }
     var diff = hd.end();
-    console.log(diff.before.size); // 1.46 mb
-    console.log(diff.after.size); // 110.81 mb
+    console.log(diff.before.size); // 3.93 mb
+    console.log(diff.after.size); // 120.93 mb
+    console.log(albums.length); // 1000000
 })();
 
 
 (function () {
 
-    var memwatch = require('memwatch');
+    var memwatch = require('memwatch-next');
     var hd = new memwatch.HeapDiff();
     // Flyweight
     function Album(title, year, artist, id) {
@@ -86,6 +87,6 @@
     var diff = hd.end();
     console.log(AlbumFactory.getNumberOfAlbums()); // 9
     console.log(AlbumManager.getNumberOfAlbums()); // 1000000
-    console.log(diff.before.size); // 1.81 mb
-    console.log(diff.after.size); // 88.06 mb
+    console.log(diff.before.size); // 4.21 mb
+    console.log(diff.after.size); // 98.1 mb
 })();
