@@ -1,36 +1,33 @@
 (function() {
-    /* Listing 7.19 */
-    /* Funktioniert nur in ES6 */
-    let interpreten = ['Kyuss', 'QOTSA', 'Ben Harper', 'Monster Magnet'];
-    let interpretenWrapper = {}
-    interpretenWrapper.interpreten = interpreten;
-    interpretenWrapper[Symbol.iterator] = function() {
-        var interpreten = this.interpreten;
-        var zaehler = this.interpreten.length-1;
-// Rückgabe des Iterator-Objekts
-        return {
-            next: function(){
-                if (zaehler < 0) {
-                    return {
-                        done: true
-                    };
-                } else {
-                    return {
-                        value: interpreten[zaehler--],
-                        done: false
-                    };
-                }
-            }
-        }
-    };
-    var iterator = interpreten[Symbol.iterator]();
-    for(let interpret of iterator) {
-        console.log(interpret);
-    }
+	const artists = ['Kyuss', 'QOTSA', 'Ben Harper', 'Monster Magnet'];
+	const artistsWrapper = {}
+	artistsWrapper.artists = artists;
+	artistsWrapper[Symbol.iterator] = function() {
+	  const artists = this.artists;
+	  let counter = this.artists.length-1;
+	  // Rückgabe des Iterator-Objekts
+	  return {
+		next: function(){
+		  if (counter< 0) {
+			return {
+			  done: true
+			};
+		  } else {
+			return {
+			  value: artists[counter--], 
+			  done: false
+			};
+		  }
+		}
+	  }
+	};
+	const iterator = artists[Symbol.iterator]();
+	for(let artist of iterator) {
+	  console.log(artist);
+	}	
 })();
 
 (function() {
-    /* Listing 7.20 */
     var Iterator = function(elements) {
         this.index = 0;
         this.elements = elements;
@@ -49,8 +46,7 @@
 })();
 
 (function() {
-    /* Listing 7.21 */
-    /* Funktioniert nur in einer Laufzeitumgebung, in der das DOM über das document-Objekt zur Verfügung steht */
+    // /* Funktioniert nur in einer Laufzeitumgebung, in der das DOM über das document-Objekt zur Verfügung steht */
     var Iterator = function(node) {
         this.index = 0;
         this.elements = Array.prototype.slice.call(node.attributes);
