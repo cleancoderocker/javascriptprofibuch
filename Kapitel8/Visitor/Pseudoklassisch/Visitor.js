@@ -1,5 +1,4 @@
 (function() {
-    /* Listing 7.35 */
     var Album = function (artist, title, year, price) {
         this.accept = function (visitor) {
             visitor.visit(this);
@@ -36,7 +35,6 @@
 })();
 
 (function() {
-    /* Listing 7.36 */
     var Album = function (artist, title, year, price) {
         this.getPrice = function () {
             return price;
@@ -67,7 +65,6 @@
 })();
 
 (function() {
-    /* Listing 7.37 */
     var Album = function (artist, title, year, price) {
         this.getPrice = function () {
             return price;
@@ -87,14 +84,14 @@
         new Album('The Doors', 'The Soft Parade', 1969, 10)
     ];
 
-    function extend(ziel, quelle) {
-        ziel = ziel || {};
-        for(var eigenschaft in quelle) {
-            if(quelle.hasOwnProperty(eigenschaft)) {
-                ziel[eigenschaft] = quelle[eigenschaft];
+    function extend(target, source) {
+        target = target || {};
+        for(var property in source) {
+            if(source.hasOwnProperty(property)) {
+                target[property] = source[property];
             }
         }
-        return ziel;
+        return target;
     }
 
     var Discount = {

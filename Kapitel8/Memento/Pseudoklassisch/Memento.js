@@ -31,17 +31,23 @@
 
     var kyuss = new Artist('Kyuss', 'Stonerrock');
     var monsterMagnet = new Artist('Monster Magnet', 'Spacerock');
-    var artistStorage = new ArtistStorage();
-    console.log(kyuss); // { name: 'Kyuss', genre: 'Stonerrock' }
-    console.log(monsterMagnet); // { name: 'Monster Magnet', genre: 'Spacerock' }
+	var artistStorage = new ArtistStorage();
+	// { name: 'Kyuss', genre: 'Stonerrock' }
+	console.log(kyuss);
+	// { name: 'Monster Magnet', genre: 'Spacerock' }
+    console.log(monsterMagnet);
     artistStorage.add(1, kyuss.saveToMemento());
     artistStorage.add(2, monsterMagnet.saveToMemento());
     kyuss.genre = 'Klassik';
-    monsterMagnet.genre = 'Blues';
-    console.log(kyuss); // { name: 'Kyuss', genre: 'Klassik' }
-    console.log(monsterMagnet); // { name: 'Monster Magnet', genre: 'Blues' }
+	monsterMagnet.genre = 'Blues';
+	// { name: 'Kyuss', genre: 'Klassik' }
+	console.log(kyuss);
+	// { name: 'Monster Magnet', genre: 'Blues' }
+    console.log(monsterMagnet);
     kyuss.replaceFromMemento(artistStorage.get(1));
-    monsterMagnet.replaceFromMemento(artistStorage.get(2));
-    console.log(kyuss); // { name: 'Kyuss', genre: 'Stonerrock' }
-    console.log(monsterMagnet); // { name: 'Monster Magnet', genre: 'Spacerock' }
+	monsterMagnet.replaceFromMemento(artistStorage.get(2));
+	// { name: 'Kyuss', genre: 'Stonerrock' }
+	console.log(kyuss);
+	// { name: 'Monster Magnet', genre: 'Spacerock' }
+    console.log(monsterMagnet);
 })();

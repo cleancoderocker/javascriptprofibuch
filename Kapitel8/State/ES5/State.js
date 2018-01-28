@@ -1,9 +1,8 @@
 (function() {
-    /* Listing 7.38 */
-    var videoplayer = {
+    var videoPlayer = {
         status: 'stopped',
         play: function() {
-            if (this.status == 'playing') {
+            if (this.status === 'playing') {
                 console.log('Spielt schon');
                 return;
             } else if (this.status === 'stopped') {
@@ -12,7 +11,7 @@
             }
         },
         stop: function() {
-            if (this.status == 'playing') {
+            if (this.status === 'playing') {
                 console.log('Video stoppen');
                 this.status = 'stopped';
             } else if (this.status === 'stopped') {
@@ -21,17 +20,16 @@
             }
         }
     }
-    videoplayer.play();
-    videoplayer.play(); // Spielt schon
-    videoplayer.stop();
-    videoplayer.stop(); // Schon gestoppt
-    videoplayer.play();
-    videoplayer.stop();
+    videoPlayer.play();
+    videoPlayer.play(); // Spielt schon
+    videoPlayer.stop();
+    videoPlayer.stop(); // Schon gestoppt
+    videoPlayer.play();
+    videoPlayer.stop();
 })();
 
 (function() {
-    /* Listing 7.39 */
-    var videoplayer = {
+    var videoPlayer = {
         state: undefined,
         states: {
             playing: {
@@ -40,13 +38,13 @@
                 },
                 stop: function() {
                     console.log('Video stoppen');
-                    videoplayer.changeState(videoplayer.states.stopped);
+                    videoPlayer.changeState(videoPlayer.states.stopped);
                 }
             },
             stopped: {
                 play: function() {
                     console.log('Video abspielen');
-                    videoplayer.changeState(videoplayer.states.playing);
+                    videoPlayer.changeState(videoPlayer.states.playing);
                 },
                 stop: function() {
                     console.log('Schon gestoppt');
@@ -68,11 +66,11 @@
             this.state = this.states.stopped;
         }
     }
-    videoplayer.initialize();
-    videoplayer.play();
-    videoplayer.play(); // Spielt schon
-    videoplayer.stop();
-    videoplayer.stop(); // Schon gestoppt
-    videoplayer.play();
-    videoplayer.stop();
+    videoPlayer.initialize();
+    videoPlayer.play();
+    videoPlayer.play(); // Spielt schon
+    videoPlayer.stop();
+    videoPlayer.stop(); // Schon gestoppt
+    videoPlayer.play();
+    videoPlayer.stop();
 })();
