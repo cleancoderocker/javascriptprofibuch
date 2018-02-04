@@ -82,7 +82,7 @@
         new Album('The Doors', 'The Soft Parade', 1969, 10)
     ];
 
-    Album.prototype.setDiscount = function(discount) {
+    Album.prototype.setDiscount = function(discount){
         this.setPrice(Math.round(this.getPrice() * discount));
     };
 

@@ -124,9 +124,9 @@
 	// Client
     const videoPlayer = new VideoPlayer();
     const buttonOn = new Button(videoPlayer.switchOn.bind(videoPlayer));
-    const buttonOf = new Button(videoPlayer.switchOff.bind(videoPlayer));
+    const buttonOff = new Button(videoPlayer.switchOff.bind(videoPlayer));
     buttonOn.click();
-    buttonOf.click();
+    buttonOff.click();
 })();
 
 (function () {

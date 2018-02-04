@@ -80,7 +80,7 @@
 			this.states = {
 				playing: new PlayingState(this),
 				stopped: new StoppedState(this)
-			}
+			};
 			this.initialize();
 		}
 
