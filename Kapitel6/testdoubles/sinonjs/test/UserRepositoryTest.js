@@ -1,54 +1,60 @@
-/**
- * Created by philipackermann on 26.10.14.
- */
-var UserRepository = require('../src/UserRepository').UserRepository;
-var WebService = require('../src/UserRepository').WebService;
-var assert = require('assert');
-var sinon = require('../bower_components/sinon/lib/sinon');
-describe('UserRepository', function() {
-    var userRepository;
-    var spy;
-    before(function() {
-        userRepository = new UserRepository();
-        spy = sinon.spy(WebService, "listAllUsers");
-    });
-    after(function() {
-        spy.restore();
-    });
-    describe('#listAllUsers()', function(){
-        it('should only call web service once and cache the results', function(){
-            var users = userRepository.listAllUsers();
-            var users2 = userRepository.listAllUsers();
-            assert.equal(spy.callCount, 1);
-        });
-    });
+const UserRepository = require('../src/UserRepository');
+const UserService = require('../src/UserService');
+const assert = require('assert');
+const sinon = require('sinon');
+
+describe('UserRepository', () => {
+	let userRepository;
+	let spy;
+	
+	before(() => {
+		userRepository = new UserRepository();
+		spy = sinon.spy(UserService, 'listAllUsers');
+	});
+	
+	after(() => {
+		spy.restore();
+	});
+	
+	describe('#listAllUsers()', () => {
+		it('should only call web service once and cache the results', () => {
+			const users = userRepository.listAllUsers();
+			const users2 = userRepository.listAllUsers();
+			assert.equal(spy.callCount, 1);
+		});
+	});
 });
-describe('UserRepository', function() {
-    var userRepository;
-    var stub;
-    before(function() {
-        userRepository = new UserRepository();
-        stub = sinon.stub(userRepository, "listAllUsers");
-        stub.returns([{
-            name: 'Peter',
-            lastname: 'Mustermann'
-        }, {
-            name: 'Max',
-            lastname: 'Mustermann'
-        }, {
-            name: 'Moritz',
-            lastname: 'Mustermann'
-        }]);
-    });
-    after(function() {
-        stub.restore();
-    });
-    describe('#filterUsers()', function(){
-        it('should return users for given filter', function(){
-            var users = userRepository.filterUsers(function(user) {
-                return user.name.indexOf('M') === 0;
-            });
-            assert.equal(users.length, 2);
-        });
-    });
+
+describe('UserRepository', () => {
+	let userRepository;
+	let stub;
+	
+	before(() => {
+		userRepository = new UserRepository();
+		stub = sinon.stub(userRepository, 'listAllUsers');
+		stub.returns([{
+			name: 'Peter',
+			lastname: 'Mustermann'
+		}, {
+			name: 'Max',
+			lastname: 'Mustermann'
+		}, {
+			name: 'Moritz',
+			lastname: 'Mustermann'
+		}]);
+	});
+	
+	after(() => {
+		stub.restore();
+	});
+	
+	describe('#filterUsers()', () => {
+		it('should return users for given filter', () => {
+			const users = userRepository.filterUsers(
+				(user) => user.name.indexOf('M') === 0
+			);
+			assert.equal(users.length, 2);
+		});
+	});
+	
 });

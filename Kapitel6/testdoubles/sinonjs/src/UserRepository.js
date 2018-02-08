@@ -1,25 +1,17 @@
-/**
- * Created by philipackermann on 26.10.14.
- */
-var WebService = {
-    listAllUsers: function() {
-        return [{
-            name: 'Max',
-            lastname: 'Mustermann'
-        }];
-    }
-}
-function UserRepository() {
+const UserService = require('./UserService');
+
+module.exports = class UserRepository {
+
+	listAllUsers() {
+		const cache = UserService.listAllUsers();
+		UserRepository.prototype.listAllUsers = () => {
+			return cache;
+		}
+		return cache;
+	}
+
+	filterUsers(filter) {
+		return this.listAllUsers().filter(filter);
+	}
+
 };
-UserRepository.prototype.listAllUsers = function() {
-    var cache = WebService.listAllUsers();
-    UserRepository.prototype.listAllUsers = function() {
-        return cache;
-    }
-    return cache;
-};
-UserRepository.prototype.filterUsers = function(filter) {
-    return this.listAllUsers().filter(filter);
-};
-module.exports.WebService = WebService;
-module.exports.UserRepository = UserRepository;
