@@ -6,22 +6,22 @@ describe('UserRepository', () => {
       const userRepository = new UserRepository();
       userRepository.add({name : 'Max'});
       userRepository.add({name : 'Moritz'});
-      assert.equal(userRepository.getAll().length, 2);
+      expect(userRepository.getAll()).toHaveLength(2);
     });
     it('should add the user only if it is not already there', () => {
       const userRepository = new UserRepository();
       userRepository.add({name : 'Max'});
       userRepository.add({name : 'Max'});
-      assert.equal(userRepository.getAll().length, 1);
+      expect(userRepository.getAll()).toHaveLength(1);
     });
   });
   describe('#clearAll()', () => {
     it('should clear all users', () => {
       const userRepository = new UserRepository();
       userRepository.add({name : 'Moritz'});
-      assert.equal(userRepository.getAll().length, 1);
+      expect(userRepository.getAll()).toHaveLength(1);
       userRepository.clearAll();
-      assert.equal(userRepository.getAll().length, 0);
+      expect(userRepository.getAll()).toHaveLength(0);
     });
   });
 });
