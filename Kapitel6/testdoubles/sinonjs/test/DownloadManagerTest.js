@@ -4,8 +4,9 @@
 var DownloadManager = require('../src/DownloadManager').DownloadManager;
 var assert = require('assert');
 var sinon = require('../bower_components/sinon/lib/sinon');
+
 describe('DownloadManager', function() {
-    describe('#downloadFinished()', function(){
+    describe('downloadFinished()', function(){
         it('should call the registered listener', function(){
             var downloadManager = new DownloadManager();
             var spy = sinon.spy();

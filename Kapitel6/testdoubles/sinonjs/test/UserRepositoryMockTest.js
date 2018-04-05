@@ -13,7 +13,7 @@ describe('UserRepository', () => {
 		expectation = mock.expects('listAllUsers').atMost(1);
 	});
 	
-	describe('#listAllUsers()', () => {
+	describe('listAllUsers()', () => {
 		it('should only call web service once and cache the results', () => {
 			const users = userRepository.listAllUsers();
 			const users2 = userRepository.listAllUsers();

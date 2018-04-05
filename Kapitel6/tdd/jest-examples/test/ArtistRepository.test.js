@@ -1,7 +1,7 @@
 // Einbinden des zu testenden Objekts
 const ArtistRepository = require('../src/ArtistRepository');
 describe('ArtistRepository', () => {
-  describe('#add()', () => {
+  describe('add()', () => {
     it('should add the artist and increase the number of all artists',
       () =>{
         const artistRepository = new ArtistRepository();
@@ -16,7 +16,7 @@ describe('ArtistRepository', () => {
 	  expect(artistRepository.getAll().length).toBe(1);
      });
   });
-  describe('#clearAll()', () => {
+  describe('clearAll()', () => {
     it('should clear all artists', () => {
       const artistRepository = new ArtistRepository();
       artistRepository.add({name : 'Monster Magnet'});

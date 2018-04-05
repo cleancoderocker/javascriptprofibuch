@@ -7,16 +7,16 @@ describe('UserRepository', () => {
 	let userRepository;
 	let spy;
 	
-	before(() => {
+	beforeEach(() => {
 		userRepository = new UserRepository();
 		spy = sinon.spy(UserService, 'listAllUsers');
 	});
 	
-	after(() => {
+	afterEach(() => {
 		spy.restore();
 	});
 	
-	describe('#listAllUsers()', () => {
+	describe('listAllUsers()', () => {
 		it('should only call web service once and cache the results', () => {
 			const users = userRepository.listAllUsers();
 			const users2 = userRepository.listAllUsers();
@@ -48,7 +48,7 @@ describe('UserRepository', () => {
 		stub.restore();
 	});
 	
-	describe('#filterUsers()', () => {
+	describe('filterUsers()', () => {
 		it('should return users for given filter', () => {
 			const users = userRepository.filterUsers(
 				(user) => user.name.indexOf('M') === 0
