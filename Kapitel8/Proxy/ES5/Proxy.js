@@ -17,7 +17,7 @@
 		// Kopieren der Property-Decriptor-Attribute
 		return proxy;
 	});
-	console.log(proxy.name); // 'Max'
+	console.log(proxy.firstName); // 'Max'
 	target.lastName = 'Mustermann';
 	console.log(proxy.lastName); // undefined
 })();

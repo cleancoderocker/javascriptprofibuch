@@ -4,7 +4,7 @@
 
         getObjects() {
             this.connect();
-            var result = this.getResults();
+            const result = this.getResults();
             this.disconnect();
             return result;
 		}
@@ -34,7 +34,8 @@
 	}
 	
     const artistRepository = new ArtistRepository();
-    const artists = artistRepository.getObjects();
+	const artists = artistRepository.getObjects();
+	console.log(artists);
 
 })();
 
@@ -42,9 +43,9 @@
 	
     class Database {
 
-        getObjects(templateMethods) {
+        getObjects(getResultsTemplateMethod) {
             this.connect();
-            var result = templateMethods[0]();
+            const result = getResultsTemplateMethod();
             this.disconnect();
             return result;
 		}
@@ -60,7 +61,7 @@
     }
 
     const database = new Database();
-    const artists = database.getObjects([
+    const artists = database.getObjects(
         () => {
             console.log('Get results');
             return [{
@@ -70,6 +71,7 @@
                     name: 'Queens of the Stone Age'
                 }];
         }
-    ]);
+	);
+	console.log(artists);
 
 })();

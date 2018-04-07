@@ -21,8 +21,7 @@
 		}
 	  }
 	};
-	const iterator = artists[Symbol.iterator]();
-	for(let artist of iterator) {
+	for(let artist of artistsWrapper) {
 	  console.log(artist);
 	}	
 })();

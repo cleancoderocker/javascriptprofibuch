@@ -1,12 +1,12 @@
-var Mediator = require("mediator-js").Mediator;
+var Mediator = require('mediator-js').Mediator;
 var chatroom = new Mediator();
 
 function User(name) {
-    this.name = name;
+  this.name = name;
 }
 User.prototype.log = function(message) {
-    console.log(this.name + ' empfängt Nachricht: ' + message);
-}
+  console.log(this.name + ' empfängt Nachricht: ' + message);
+};
 
 var topic = 'Professionelles JavaScript';
 var user1 = new User('Max');
