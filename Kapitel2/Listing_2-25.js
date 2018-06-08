@@ -1,9 +1,9 @@
-function addiere(x, y) {
-    let ergebnis = x + y;
-    if(arguments[2]) { // Zugriff auf den optionalen Parameter
-        console.log(ergebnis);
-    }
-    return ergebnis;
+function add(x, y, log) {
+  const result = x + y;
+  if (log) {
+    console.log(result);
+  }
+  return result;
 }
-addiere(2,2);       // Aufruf ohne Logging
-addiere(2,2,true);  // Aufruf mit Logging
+add(2, 2); // Aufruf ohne Logging
+add(2, 2, true); // Aufruf mit Logging

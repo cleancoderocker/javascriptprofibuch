@@ -1,13 +1,11 @@
-function zaehler(name) {
-    var i=0;
-    return function() {
-        i++;
-        console.log(name + ': ' + i);
-    }
+function fibonacciImperative(n) {
+  const fibonacciNumbers = new Array();
+  fibonacciNumbers.push(0);
+  fibonacciNumbers.push(1);
+  for (let i = 0; i < n; i++) {
+    fibonacciNumbers.push(fibonacciNumbers[0] + fibonacciNumbers[1]);
+    fibonacciNumbers.shift();
+  }
+  return fibonacciNumbers[0];
 }
-var zaehler1 = zaehler('Zähler 1');
-zaehler1(); // Zähler 1: 1
-zaehler1(); // Zähler 1: 2
-var zaehler2 = zaehler('Zähler 2');
-zaehler2(); // Zähler 2: 1
-zaehler2(); // Zähler 2: 2
+console.log(fibonacciImperative(11)); // 89

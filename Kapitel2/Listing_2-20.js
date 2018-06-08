@@ -1,12 +1,11 @@
-function beispiel(x) {
-    var y;
-    var i;
-    console.log(y);
-    console.log(i);
-    if(x) {
-        y = 4711;
-    }
-    for(i=0; i<4711; i++) {
-    }
+function example(x) {
+  console.log(y);
+  console.log(i);
+  if (x) {
+    var y = 4711;
+  }
+  for (var i = 0; i < 4711; i++) {
+    /* Irgendwas machen */
+  }
 }
-beispiel(true);
+example(true); // Ausgabe: undefined

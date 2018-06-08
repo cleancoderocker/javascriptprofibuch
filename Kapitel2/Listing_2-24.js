@@ -1,9 +1,13 @@
-function addiere(x, y, log) {
-    let ergebnis = x + y;
-    if(log) {
-        console.log(ergebnis);
-    }
-    return ergebnis;
+function createPerson(firstName, lastName) {
+  return {
+    firstName: firstName,
+    lastName: lastName
+  };
 }
-addiere(2,2);       // Aufruf ohne Logging
-addiere(2,2,true);  // Aufruf mit Logging
+function createPerson(firstName, lastName, age) {
+  return {
+    firstName: firstName,
+    lastName: lastName,
+    age: age
+  };
+}

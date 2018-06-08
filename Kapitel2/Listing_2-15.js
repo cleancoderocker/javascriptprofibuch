@@ -1,5 +1,4 @@
-var name = "globaler Name";
-function getNameGlobal() {
-    return this.name;
+function getFirstNameGlobal() {
+  return this.name;
 }
-console.log(getNameGlobal()); // Ausgabe: globaler Name
+console.log(getFirstNameGlobal()); // undefined

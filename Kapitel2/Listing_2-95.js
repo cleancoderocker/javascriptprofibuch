@@ -1,19 +1,16 @@
-function asynchroneFunktion(callback) {
-    setTimeout(function() {
-        var ergebnis = 4711; // Hier normalerweise mehr Code
-        if(ergebnis < 0) {
-            callback(new Error("Ergebnis kleiner 0"), ergebnis);
-        } else {
-            callback(null, ergebnis);
-        }
-    }, 2000);
-}
-asynchroneFunktion(
-    function(fehler, ergebnis) {
-        if(fehler) {
-            console.error(fehler);
-        } else {
-            console.log(ergebnis);
-        }
+function asyncFunction(success, error) {
+  setTimeout(function() {
+    const result = 4711; // Hier normalerweise mehr Code
+    if (result < 0) {
+      error(new Error('Ergebnis kleiner 0'));
+    } else {
+      success(result);
     }
+  }, 2000);
+}
+asyncFunction(
+  // anonyme Implementierung von success()
+  result => console.log(result),
+  // anonyme Implementierung von error()
+  error => console.error(error)
 );

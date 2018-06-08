@@ -1,9 +1,11 @@
-function summePerCallback(x, y, callback) {
-    var ergebnis = x + y;
-    if(typeof callback === "function") {
-        callback(ergebnis);
-    }
+function aFunction(callback) {
+  if (typeof callback === 'function') {
+    callback();
+  } else {
+    // Fehlerbehandlung
+  }
 }
-summePerCallback(2, 2, function(ergebnis) {
-    console.log("Das Ergebnis lautet: " + ergebnis)
+
+aFunction(function() {
+  console.log('anonyme Funktion');
 });

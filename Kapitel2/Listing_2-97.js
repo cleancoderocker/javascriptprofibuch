@@ -1,11 +1,8 @@
-function erstEinsDannZwei() {
-    console.log(1);
-    erstEinsDannZwei = function() {
-        console.log(2);
-    }
+function firstPrintOneThenPrintTwo() {
+  console.log(1);
+  firstPrintOneThenPrintTwo = function() {
+    console.log(2);
+  };
 }
-var funktionsReferenz = erstEinsDannZwei;
-erstEinsDannZwei(); // 1
-erstEinsDannZwei(); // 2
-funktionsReferenz(); // 1
-funktionsReferenz(); // 1
+firstPrintOneThenPrintTwo(); // Ausgabe: 1
+firstPrintOneThenPrintTwo(); // Ausgabe: 2

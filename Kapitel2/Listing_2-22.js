@@ -1,6 +1,5 @@
 function example(x) {
-  var y;
-  var i;
+  var y, i;
   console.log(y);
   console.log(i);
   if (x) {

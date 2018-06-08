@@ -1,8 +1,8 @@
-function addition(x, y) {
-    return x + y;
+function add(x, y) {
+  return x + y;
 }
-var operation = addition;
-var ergebnis = addition(2,2);
-var ergebnis2 = operation(2,2);
-console.log(addition.name); // Ausgabe: addition
-console.log(operation.name); // Ausgabe: addition
+const operation = add;
+const result = add(2, 2);
+const result2 = operation(2, 2);
+console.log(add.name); // Ausgabe: add
+console.log(operation.name); // Ausgabe: add

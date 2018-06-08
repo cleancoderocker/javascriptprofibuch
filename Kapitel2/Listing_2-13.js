@@ -1,7 +1,14 @@
-var person = {
-    name: 'Max', // Objekteigenschaft
-    getName: function() {
-        return this.name;
-    }
-}
-console.log(person.getName()); // Ausgabe: Max
+const operations = {
+  add(x, y) {
+    return x + y;
+  },
+  subtract(x, y) {
+    return x - y;
+  },
+  multiply(x, y) {
+    return x * y;
+  },
+  divide(x, y) {
+    return x / y;
+  }
+};

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<script>
+		function init() {
+			document.getElementById('button').addEventListener(
+				'click',
+				function (event) {
+					document.getElementById('message').value = 'Geklickt';
+				},
+				false);
+		}
+	</script>
+</head>
+
+<body onload="init()">
+	<button id="button">Zeige Meldung</button>
+	<textarea id="message"></textarea>
+</body>
+
+</html>

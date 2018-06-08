@@ -1,4 +1,22 @@
-var fibonacciRekursiv = function(n) {
-    return n < 2 ? n : fibonacciRekursiv(n - 1) + fibonacciRekursiv(n - 2);
+function addFour(x) {
+  return x + 4;
+}
+function multiplyWithSeven(x) {
+  return x * 7;
+}
+const compositionGeneric = function() {
+  const functions = arguments;
+  return function() {
+    let args = arguments;
+    for (let i = functions.length; i-- > 0; ) {
+      args = [functions[i].apply(this, args)];
+    }
+    return args[0];
+  };
 };
-console.log(fibonacciRekursiv(11)); // 89
+const addEightThenMultiplyWithSeven = compositionGeneric(
+  multiplyWithSeven,
+  addFour,
+  addFour
+);
+console.log(addEightThenMultiplyWithSeven(2)); // 70

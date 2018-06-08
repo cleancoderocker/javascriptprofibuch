@@ -1,11 +1,20 @@
-function erstellePerson(name, vorname) {
-    return {
-        name: name,
-        vorname: vorname
-    }
+function partial(aFunction /*, parameter...*/) {
+  const parametersBound = Array.prototype.slice.call(arguments, 1);
+  return function() {
+    const parametersUnbound = Array.prototype.slice.call(arguments, 0);
+    return aFunction.apply(this, parametersBound.concat(parametersUnbound));
+  };
 }
-var erstelleMustermann = erstellePerson.bind(null, 'Mustermann');
-var max = erstelleMustermann('Max');
-console.log(max); // { name: 'Mustermann', vorname: 'Max' }
-var moritz = erstelleMustermann('Moritz');
-console.log(moritz); // { name: 'Mustermann', vorname: 'Moritz' }
+function createPerson(firstName, lastName) {
+  return {
+    firstName: firstName,
+    lastName: lastName
+  };
+}
+const createMustermann = partial(createPerson, 'Mustermann');
+const max = createMustermann('Max');
+// Ausgabe: { firstName: 'Max', lastName: 'Mustermann' }
+console.log(max);
+// Ausgabe: { firstName: 'Moritz', lastName: 'Mustermann' }
+const moritz = createMustermann('Moritz');
+console.log(moritz);

@@ -22,8 +22,16 @@ const artists = [
     ]
   }
 ];
-let totalNumberOfAlbums = 0;
-for (let i = 0, l = artists.length; i < l; i++) {
-  totalNumberOfAlbums += artists[i].albums.length;
+function releasedAfter2000(album) {
+  return album.released > 2000;
 }
-console.log(totalNumberOfAlbums);
+function hasAlbumReleasesdAfter2000(artist) {
+  return artist.albums.filter(releasedAfter2000).length > 0;
+}
+function toArtistName(artist) {
+  return artist.name;
+}
+artists
+  .filter(hasAlbumReleasesdAfter2000)
+  .map(toArtistName)
+  .forEach(console.log);
