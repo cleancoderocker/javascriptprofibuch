@@ -1,7 +1,7 @@
-var person = {
-    name : 'Max',
-    nachname : 'Mustermann',
-    sprechen : function() {
-        console.log('Hallo');
-    }
-}
+const person = {
+  firstName: 'Max',
+  lastName: 'Mustermann',
+  talk: function() {
+    console.log('Hallo');
+  }
+};

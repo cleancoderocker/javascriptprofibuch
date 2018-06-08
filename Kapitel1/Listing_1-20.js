@@ -1,2 +1,6 @@
-/* Funktioniert nur in ES6 */
-var addition = x => { return x + x };
+const add = (x) => {
+	return x + x;
+};
+
+// Alternativ:
+// const add = x => x + x;

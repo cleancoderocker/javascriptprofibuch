@@ -1,3 +1,5 @@
-"use strict";
-var variable = 4;
-// variable2 = 4711; // Führt zu dem Fehler "variable2 is not defined"
+try {
+  console.log(checkAge(-22));
+} catch (error) {
+  console.log(error); // RangeError: Alter darf nicht negativ sein
+}

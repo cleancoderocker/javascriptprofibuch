@@ -1,1 +1,1 @@
-var mitHttp = /http/;
+const startingWithHTTP = /http/;

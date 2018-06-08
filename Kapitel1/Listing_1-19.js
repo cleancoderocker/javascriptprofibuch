@@ -1,1 +1,5 @@
-var addition = new Function("zahl1", "zahl2", "return zahl1 + zahl2");
+const add = new Function(
+  'number1', 					// Erster Parameter
+  'number2', 					// Zweiter Parameter
+  'return number1 + number2' 	// Funktionskörper
+);
