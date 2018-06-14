@@ -1,18 +1,16 @@
-var tier = {
-    fressen: function() {
-        console.log('fressen');
-    }
-}
-var hund = Object.create(tier);
-hund.bellen = function() {
-    console.log(this.name + ': Wau');
-}
-var bello = Object.create(hund);
+const animal = {
+  name: null,
+  eat() {
+    console.log('fressen');
+  }
+};
+const dog = Object.create(animal);
+dog.bark = function() {
+  console.log('Wau');
+};
+const bello = Object.create(dog);
 bello.name = 'Bello';
-var struppi = Object.create(hund);
+const struppi = Object.create(dog);
 struppi.name = 'Struppi';
-struppi.bellen = function() {
-    hund.bellen();
-    hund.bellen();
-}
-struppi.bellen(); // 2 x undefined: Wau
+bello.eat(); // fressen
+bello.bark(); // Wau

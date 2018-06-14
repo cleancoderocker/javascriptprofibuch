@@ -1,15 +1,4 @@
-var max = Object.create(Object.prototype, {
-    name: {
-        value: 'Max',
-        writable: false,
-        configurable: true,
-        enumerable: true
-    },
-    nachname: {
-        value: 'Mustermann',
-        writable: true,
-        configurable: true,
-        enumerable: true
-    }
-});
+const max = Object.create(Object.prototype);
+max.firstName = 'Max';
+max.lastName = 'Mustermann';
 console.dir(max);

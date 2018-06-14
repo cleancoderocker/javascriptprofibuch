@@ -1,21 +1,28 @@
-var Karton = function(breite, tiefe, hoehe) {
-    this.breite = breite;
-    this.tiefe = tiefe;
-    this.hoehe = hoehe;
-    this.implementsInterfaces = ['Box'];
-    this.getBreite = function() {
-        return breite;
+const DrivingMixin = superclass =>
+  class extends superclass {
+    drive() {
+      console.log("I'm driving");
     }
-    this.getTiefe = function() {
-        return tiefe;
+  };
+const FlyingMixin = superclass =>
+  class extends superclass {
+    fly() {
+      console.log("I'm flying");
     }
-    this.getHoehe = function() {
-        return hoehe;
-    }
-    return {
-        implementsInterfaces : this.implementsInterfaces,
-        getBreite : this.getBreite,
-        getTiefe : this.getTiefe,
-        getHoehe : this.getHoehe,
-    }
+  };
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName || '';
+    this.lastName = lastName || '';
+  }
+  sayHello() {
+    console.log(this.firstName + ': "Hello"');
+  }
 }
+class DrivingPerson extends DrivingMixin(Person) {}
+class FlyingPerson extends FlyingMixin(Person) {}
+class FlyingAndDrivingPerson extends FlyingMixin(DrivingMixin(Person)) {}
+const superman = new FlyingAndDrivingPerson('Clark', 'Kent');
+superman.sayHello(); // Clark: "Hello"
+superman.drive(); // I'm driving
+superman.fly(); // I'm flying

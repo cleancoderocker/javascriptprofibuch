@@ -1,16 +1,17 @@
-define(
-    'Validator', // Names des Moduls
-    ['Persistenz'], // Zu importierende Module
-    function (persistenz) { // Funktion, die das Modul zurückliefert
-        var modul = {
-            format: 'HTML5',
-            ergebnisse: [],
-            validiere: function() {
-                console.log('Validierung gestartet: ' + format);
-// Hier weiterer Code, der die Ergebnisse ermittelt
-                persistenz.speichereErgebnisse(ergebnisse);
-            }
-        }
-        return modul;
-    }
-);
+function Employee(firstName, lastName, id) {
+  this._firstName = firstName;
+  this._lastName = lastName;
+  this._id = id;
+}
+Employee.prototype.getFirstName = function() {
+  return this._firstName;
+};
+Employee.prototype.getLastName = function() {
+  return this._lastName;
+};
+Employee.prototype.getId = function() {
+  return this._id;
+};
+Employee.prototype.print = function() {
+  return this._firstName + ' ' + this._lastName + ' (' + this._id + ')';
+};

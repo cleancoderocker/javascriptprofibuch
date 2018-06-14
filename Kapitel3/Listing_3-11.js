@@ -1,12 +1,15 @@
-/* Funktioniert nur in ES6 */
 class Person {
-    constructor(vorname, nachname) {
-        this.vorname = vorname;
-        this.nachname = nachname;
-    }
-    toString() {
-        return this.vorname + ' ' + this.nachname;
-    }
+  // Konstruktor
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+  // Objektmethode
+  toString() {
+    return this.firstName + ' ' + this.lastName;
+  }
+  // Statische Methode
+  static generateRandomNumber() {
+    return Math.random();
+  }
 }
-var max = new Person('Max', 'Mustermann');
-console.log(max.toString());

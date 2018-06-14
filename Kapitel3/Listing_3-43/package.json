@@ -1,0 +1,15 @@
+{
+  "name": "Listing_3-43",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Listing_3-43.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Philip Ackermann <info@philipackermann.de>",
+  "license": "MIT",
+  "dependencies": {
+    "mixwith": "^0.1.1"
+  }
+}

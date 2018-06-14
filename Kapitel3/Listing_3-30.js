@@ -1,9 +1,17 @@
-function Mitarbeiter(name, nachname, mitarbeiterID) {
-    var name = name;
-    var nachname = nachname;
-    var mitarbeiterID = mitarbeiterID;
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  eat() {
+    console.log('fressen');
+  }
 }
-var max = new Mitarbeiter('Max', 'Mustermann', 2345);
-console.log(max.name); // undefined
-console.log(max.nachname); // undefined
-console.log(max.mitarbeiterID); // undefined
+function generateSuperclass() {
+  return Animal;
+}
+class Dog extends generateSuperclass() {
+  constructor(name, race) {
+    super(name);
+    this.race = race;
+  }
+}

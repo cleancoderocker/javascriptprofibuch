@@ -1,20 +1,12 @@
-var ValidatorModul = ValidatorModul || (function () {
-        var format = 'HTML5';
-        var ergebnisse = [];
-        function validiere() {
-            console.log('Validierung gestartet: ' + format);
-            ergebnisse.push('Test fehlgeschlagen');
-        }
-        function getErgebnisse() {
-            return ergebnisse;
-        }
-        return {
-            validiere: validiere,
-            getErgebnisse: getErgebnisse
-        }
-    })();
-ValidatorModul.validiere();
-var ergebnisse = ValidatorModul.getErgebnisse(); console.log(ergebnisse);
-// Ausgabe: Test fehlgeschlagen ergebnisse[0] = 'Test bestanden';
-var ergebnisse2 = ValidatorModul.getErgebnisse(); console.log(ergebnisse2);
-// Ausgabe: Test bestanden
+class Employee {
+  constructor(firstName, lastName, id) {
+    var firstName = firstName;
+    var lastName = lastName;
+    var id = id;
+  }
+}
+
+const max = new Employee('Max', 'Mustermann', 2345);
+console.log(max.firstName); // undefined
+console.log(max.lastName); // undefined
+console.log(max.id); // undefined

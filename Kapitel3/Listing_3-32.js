@@ -1,17 +1,24 @@
-function Mitarbeiter(name, nachname, mitarbeiterID) {
-    this._name = name;
-    this._nachname = nachname;
-    this._mitarbeiterID = mitarbeiterID;
+function extend(target, source) {
+  target = target || {};
+  for (let property in source) {
+    if (source.hasOwnProperty(property)) {
+      target[property] = source[property];
+    }
+  }
+  return target;
 }
-Mitarbeiter.prototype.getName = function() {
-    return this._name;
+
+const person = {
+  name: 'Max',
+  getName() {
+    return this.name;
+  }
 };
-Mitarbeiter.prototype.getNachname = function() {
-    return this._nachname;
+const dog = {
+  name: 'Bello',
+  bark() {
+    console.log('Wau wau');
+  }
 };
-Mitarbeiter.prototype.getMitarbeiterID = function() {
-    return this._mitarbeiterID;
-};
-Mitarbeiter.prototype.print = function() {
-  return this.getName() + ' ' + this.getNachname() + ' (' + this.getMitarbeiterID() + ')';
-};
+extend(dog, person);
+console.log(dog.getName()); // Ausgabe: "Max"

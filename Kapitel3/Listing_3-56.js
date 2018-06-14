@@ -1,10 +1,18 @@
-// Datei Validator.js
-var persistenz = require('Persistenz');
-var format = 'HTML5';
-var ergebnisse = [];
-function validiere() {
-    console.log('Validierung gestartet: ' + format);
-// Hier weiterer Code, der die Ergebnisse ermittelt
-    persistenz.speichereErgebnisse(ergebnisse);
-}
-exports.validiere = validiere;
+const Employee = (function() {
+  function Employee(firstName, lastName, id) {
+    var firstName = firstName;
+    var lastName = lastName;
+    var id = id;
+    this.getFirstName = function() {
+      return firstName;
+    };
+    /* Hier die weiteren Getter */
+  }
+  Employee.prototype.print = function() {
+    return (
+      this.getFirstName() + ' ' + this.getLastName() + ' (' + this.getId() + ')'
+    );
+  };
+  /* restliche Methoden */
+  return Employee;
+})();

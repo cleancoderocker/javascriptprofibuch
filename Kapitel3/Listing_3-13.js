@@ -1,12 +1,6 @@
-var max = {
-    name: 'Max',
-    nachname: 'Mustermann'
+const max = {
+  firstName: 'Max',
+  lastName: 'Mustermann'
 };
-var maexchen = Object.create(max);
-maexchen.name = "Maexchen";
-console.log(maexchen.__proto__);
-// Object {name: "Max", nachname: "Mustermann"}
-console.log(Object.getPrototypeOf(maexchen));
-// Object {name: "Max", nachname: "Mustermann"}
-console.log(maexchen.name); // Maexchen
-console.log(maexchen.nachname); // Mustermann
+console.log(max.__proto__); // Object {}
+console.log(Object.getPrototypeOf(max)); // Object {}

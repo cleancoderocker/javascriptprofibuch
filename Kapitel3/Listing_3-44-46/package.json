@@ -1,0 +1,17 @@
+{
+  "name": "Listing_3-44",
+  "version": "1.0.0",
+  "description": "",
+  "main": "AbstractBookRepository.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Philip Ackermann <info@philipackermann.de>",
+  "license": "MIT",
+  "dependencies": {
+    "mixwith": "^0.1.1",
+    "mongodb": "^3.0.10",
+    "winston": "^3.0.0"
+  }
+}
