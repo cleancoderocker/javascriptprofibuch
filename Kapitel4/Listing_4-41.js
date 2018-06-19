@@ -1,4 +1,5 @@
-/* Funktioniert nur in ES6 */
 var bestOfStonerrock = ['Kyuss', 'QOTSA', 'Unida', 'Vista Chino'];
-var [platz1, platz2, platz3, platz4, platz5] = bestOfStonerrock;
-console.log(platz5); // undefined
+var position1 = bestOfStonerrock[0];
+var position2 = bestOfStonerrock[1];
+var position3 = bestOfStonerrock[2];
+var position4 = bestOfStonerrock[3];

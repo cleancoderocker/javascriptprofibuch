@@ -1,5 +1,4 @@
-/* Funktioniert nur in ES6 */
-function getBestOfStonerrock() {
-    return ['Kyuss', 'QOTSA', 'Unida', 'Vista Chino'];
-}
-var [platz1, platz2, platz3, platz4] = getBestOfStonerrock();
+const artistInformation = ['Kyuss', 'Blues for the Red Sun', 'Sky Valley'];
+const [name, ...albums] = artistInformation;
+console.log(name); // "Kyuss"
+console.log(albums); // ["Blues for the Red Sun", "Sky Valley"]

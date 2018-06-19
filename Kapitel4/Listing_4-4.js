@@ -1,13 +1,13 @@
 function test() {
-    var ergebnis = [];
-    for(var i=1; i<11; i++) {
-        var zahl = i;
-        ergebnis[i] = function() {
-            return zahl;
-        };
-    }
-    ergebnis.forEach(function(zahlFunktion) {
-        console.log(zahlFunktion());
-    });
+  var result = [];
+  for (var i = 1; i < 11; i++) {
+    var number = i;
+    result[i] = function() {
+      return number;
+    };
+  }
+  result.forEach(function(numberFunction) {
+    console.log(numberFunction());
+  });
 }
-test();
+test(); // Ausgabe: Zehn Mal die Zahl 10

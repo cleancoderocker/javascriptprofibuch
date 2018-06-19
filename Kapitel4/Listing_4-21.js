@@ -1,7 +1,6 @@
-/* Funktioniert nur in ES6 */
-var Logger = {
-    info(meldung) {
-        console.log(meldung);
-    }
-}
+const Logger = {
+  info(message) {
+    console.log(message);
+  }
+};
 Logger.info('Tests');

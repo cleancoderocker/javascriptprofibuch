@@ -1,13 +1,15 @@
-/* Funktioniert nur in ES6 */
-var interpreten = ['Kyuss', 'QOTSA', 'Ben Harper', 'Monster Magnet']
-var iterator = interpreten.values();
-var interpret = iterator.next();
-console.log(interpret); // {value: 'Kyuss', done: false}
-interpret = iterator.next();
-console.log(interpret); // {value: 'QOTSA', done: false}
-interpret = iterator.next();
-console.log(interpret); // {value: 'Ben Harper', done: false}
-interpret = iterator.next();
-console.log(interpret); // {value: 'Monster Magnet', done: false}
-interpret = iterator.next();
-console.log(interpret); // {done: true}
+const person = {
+  firstname: 'Max',
+  lastName: 'Mustermann',
+  address: {
+    postCode: 23456,
+    street: 'Musterstraße 22'
+  },
+  phoneNumbers: [23452345678, 2345623456]
+};
+const {
+  firstName: firstNameExtracted,
+  lastName: lastNameExtracted,
+  address: { postCode: postCodeExtracted, street: streetExtracted },
+  phoneNumbers: [phoneNumber1Extracted, phoneNumber2Extracted]
+} = person;

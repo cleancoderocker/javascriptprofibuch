@@ -1,11 +1,12 @@
 function createPerson(firstName, lastName) {
-  firstName = typeof firstName !== 'undefined' ? firstName : 'Max';
-  lastName = typeof lastName !== 'undefined' ? lastName : 'Mustermann';
+  firstName = firstName || 'Max';
+  lastName = lastName || 'Mustermann';
   return {
     firstName: firstName,
     lastName: lastName
   };
 }
+
 const ben = createPerson('Ben', 'Harper');
 // {name: "Ben", nachname: "Harper"}
 const moritz = createPerson('Moritz');

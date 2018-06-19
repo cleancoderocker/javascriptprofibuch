@@ -1,18 +1,18 @@
 var Person = {
-    set name(wert) {
-        console.log("Neuer Name: " + wert);
-        this.internerName = wert;
-    },
-    get name() {
-        console.log("Name: " + this.internerName);
-        return this.internerName;
-    },
-    set nachname(wert) {
-        console.log("Neuer Nachname: " + wert);
-        this.internerNachname = wert;
-    },
-    get nachname() {
-        console.log("Nachname: " + this.internerNachname);
-        return this.internerNachname;
-    }
-}
+  set name(value) {
+    console.log('Neuer Name: ' + value);
+    this._name = value;
+  },
+  get name() {
+    console.log('Name: ' + this._name);
+    return this._name;
+  },
+  set lastName(value) {
+    console.log('Neuer Nachname: ' + value);
+    this._lastName = value;
+  },
+  get lastName() {
+    console.log('Nachname: ' + this._lastName);
+    return this._lastName;
+  }
+};

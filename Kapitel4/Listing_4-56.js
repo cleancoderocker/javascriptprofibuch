@@ -1,26 +1,13 @@
-/* Funktioniert nur in ES6 */
-var aktuellerSong = {
-    titel: 'Demon Cleaner',
-    interpret: 'Kyuss',
-    album: {
-        titel: 'Sky Valley',
-        erschienen: '1994'
-    }
+const person = {
+  firstname: 'Max',
+  lastName: 'Mustermann',
+  address: {
+    postalCode: 23456,
+    street: 'Musterstraße 22'
+  }
 };
-var logSongInfo = function logSongInfo(
-    {
-        titel,
-        interpret,
-        album: {
-            erschienen: jahr
-            }
-        }
-) {
-    console.log('Titel: ' + titel + '\nInterpret: ' + interpret +
-    '\nErschienen: ' + jahr);
-};
-logSongInfo(aktuellerSong);
-// Ausgabe:
-// Titel: Demon Cleaner
-// Interpret: Kyuss
-// Erschienen: 1994
+const {
+  firstName: firstNameExtracted,
+  lastName: lastNameExtracted,
+  address: { postCode: postCodeExtracted, street: streetExtracted }
+} = person;

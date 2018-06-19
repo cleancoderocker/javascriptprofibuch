@@ -1,5 +1,9 @@
-var bestOfStonerrock = ['Kyuss', 'QOTSA', 'Unida', 'Vista Chino'];
-var platz1 = bestOfStonerrock[0];
-var platz2 = bestOfStonerrock[1];
-var platz3 = bestOfStonerrock[2];
-var platz4 = bestOfStonerrock[3];
+const person = createPerson(
+  (firstName = 'Max'),
+  (lastName = 'Mustermann'),
+  (height = 180),
+  (weight = 79),
+  (dayOfBirth = 2),
+  (monthOfBirth = 4),
+  (yearOfBirth = 1956)
+);

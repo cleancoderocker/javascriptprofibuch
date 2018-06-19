@@ -1,10 +1,14 @@
-/* Funktioniert nur in ES6 */
-var interpreten = new Set();
-interpreten.add('Kyuss');
-interpreten.add('Kyuss');
-interpreten.add('Tool');
-interpreten.add('Monster Magnet');
-interpreten.add('Ben Harper');
-console.log(interpreten.size); // 4
-console.log(interpreten.has('Kyuss')); // true
-console.log(interpreten.has('Justin Bieber')); // false
+const personValidator = {
+  set(objekt, property, value) {
+    if (property === 'age') {
+      if (!Number.isInteger(value)) {
+        throw new TypeError('Das Alter muss eine Zahl sein.');
+      }
+    }
+    objekt[property] = value;
+  }
+};
+const person = new Proxy({}, personValidator);
+person.age = 100;
+console.log(person.age); // 100
+person.age = 'Mitte 20'; // TypeError: Das Alter muss eine Zahl sein.

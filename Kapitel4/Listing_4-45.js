@@ -1,5 +1,9 @@
-var koordinaten = [
-    [2,3,4],
-    [5,6,7],
-    [8,9,10]
-];
+const bestOfStonerrock = ['Kyuss', 'QOTSA', 'Unida', 'Vista Chino'];
+const [
+  position1,
+  position2,
+  position3,
+  position4,
+  position5 = 'Monster Magnet'
+] = bestOfStonerrock;
+console.log(position5); // "Monster Magnet"

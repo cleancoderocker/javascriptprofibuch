@@ -1,8 +1,9 @@
-var konstanten = {};
-Object.defineProperty(konstanten, 'MAXIMUM', {
-    writable: false,
-    enumerable: true,
-    configurable: false,
-    value: 44
+var constants = {};
+Object.defineProperty(constants, 'MAXIMUM', {
+  writable: false,
+  enumerable: true,
+  configurable: false,
+  value: 44
 });
-konstanten.MAXIMUM = 4711; // ohne Wirkung
+constants.MAXIMUM = 4711; // ohne Wirkung
+console.log(constants.MAXIMUM); // Ausgabe: 44

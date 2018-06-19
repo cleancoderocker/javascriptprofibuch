@@ -1,3 +1,11 @@
-/* Funktioniert nur in ES6 */
-var bestOfStonerrock = ['Kyuss', 'QOTSA', 'Unida', 'Vista Chino'];
-var [platz1, platz2, platz3, platz4] = bestOfStonerrock;
+const person = createPerson(
+  (firstName = 'Max'),
+  (lastName = 'Mustermann'),
+  (height = 180),
+  (weight = 79),
+  (dayOfBirth = 2),
+  (monthOfBirth = 4),
+  (yearOfBirth = 1956)
+);
+
+const person = createPerson((yearOfBirth = 1979));

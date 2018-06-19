@@ -1,2 +1,2 @@
-const UNDEFINIERT;
-UNDEFINIERT = "definiert"; // ohne Wirkung
+const NOT_DEFINED; // ohne Wirkung oder Fehler
+NOT_DEFINED = 'definiert'; // ohne Wirkung oder Fehler

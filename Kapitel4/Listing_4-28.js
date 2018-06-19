@@ -1,5 +1,6 @@
-/* Funktioniert nur in ES6 */
-var tags = ['heavy', 'sludge', 'stoner'];
-var mehrTags = ['psychedelic', 'spacerock'];
-var alleTags = ['desertrock', ...tags, ...mehrTags, 'punk'];
-console.log(alleTags);
+const tags = ['heavy', 'sludge', 'stoner'];
+const moreTags = ['psychedelic', 'spacerock'];
+const allTags = ['desertrock', ...tags, ...moreTags, 'punk'];
+console.log(allTags);
+// Ausgabe: ["desertrock", "heavy", "sludge",
+// "stoner", "psychedelic", "spacerock", "punk"]

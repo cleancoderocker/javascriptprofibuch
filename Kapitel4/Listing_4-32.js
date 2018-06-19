@@ -1,10 +1,12 @@
-/* Funktioniert nur in ES6 */
-function standardNachname() {
-    return 'Mustermann';
+function createPerson(firstName = 'Max', lastName = 'Mustermann') {
+  return {
+    firstName: firstName,
+    lastName: lastName
+  };
 }
-function erstellePerson(name = 'Max', nachname = standardNachname()) {
-    return {
-        name: name,
-        nachname: nachname
-    }
-}
+const moritz = createPerson('Moritz');
+console.log(moritz.name); // 'Moritz'
+console.log(moritz.nachname); // 'Mustermann'
+const misterNull = createPerson(undefined, null);
+console.log(misterNull.name); // 'Max'
+console.log(misterNull.nachname); // null

@@ -1,3 +1,9 @@
-/* Funktioniert nur in ES6 */
-var bestOfStonerrock = ['Kyuss', 'QOTSA', 'Unida', 'Vista Chino'];
-var [platz1, , platz3, platz4] = bestOfStonerrock;
+const bestOfStonerrock = ['Kyuss', 'QOTSA', 'Unida', 'Vista Chino'];
+const [
+  position1,
+  position2,
+  position3,
+  position4,
+  position5
+] = bestOfStonerrock;
+console.log(position5); // undefined

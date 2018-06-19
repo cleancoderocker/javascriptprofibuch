@@ -1,2 +1,2 @@
-var KONSTANTE = 44;
-console.log(KONSTANTE); // 44
+var MAXIMUM = 44;
+console.log(MAXIMUM); // 44
