@@ -1,4 +1,4 @@
-const ValidatorModule = (function(module) {
+var ValidatorModule = (function(module) {
   let format = 'HTML5';
   // 2.) Eigenschaften und Funktionen hinzufügen
   module.results = [];

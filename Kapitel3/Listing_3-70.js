@@ -1,4 +1,4 @@
-const de = de || {
+var de = de || {
   philipackermann: {
     javascript: {}
   }

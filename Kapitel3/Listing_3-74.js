@@ -1,4 +1,4 @@
-const PersistenceModule =
+var PersistenceModule =
   PersistenceModule ||
   (function() {
     function saveResults(results) {
@@ -8,7 +8,7 @@ const PersistenceModule =
       saveResults: saveResults
     };
   })();
-const ValidatorModule =
+var ValidatorModule =
   ValidatorModule ||
   (function(persistenceModule) {
     let format = 'HTML5';

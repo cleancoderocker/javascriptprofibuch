@@ -1,3 +1,3 @@
-const de = de || {};
+var de = de || {};
 de.philipackermann = de.philipackermann || {};
 de.philipackermann.javascript = de.philipackermann.javascript || {};

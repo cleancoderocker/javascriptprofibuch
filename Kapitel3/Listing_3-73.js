@@ -1,4 +1,4 @@
-const ValidatorModule =
+var ValidatorModule =
   ValidatorModule ||
   (function() {
     let format = 'HTML5';

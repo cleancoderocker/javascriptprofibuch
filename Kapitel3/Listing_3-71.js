@@ -1,4 +1,4 @@
-const ValidatorModule =
+var ValidatorModule =
   ValidatorModule ||
   (function() {
     // private Variable
