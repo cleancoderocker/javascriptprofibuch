@@ -1,0 +1,29 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "Beispielprojekt zur Demonstration von Continuous Integration für JavaScript-Projekte",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test",
+    "test-ci": "gulp test --silent > test.tap",
+    "coverage": "gulp test-coverage",
+    "coverage-ci": "gulp test-coverage",
+    "eslint": "gulp lint",
+    "eslint-ci": "gulp lint --silent > checkstyle-result.xml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://localhost:10080/cleancoderocker/hello-world.git"
+  },
+  "keywords": ["javascript", "ci"],
+  "author": "Philip Ackermann",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-istanbul": "^1.1.1",
+    "gulp-mocha": "^3.0.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0"
+  }
+}
