@@ -1,7 +1,6 @@
-// Einbinden des zu testenden Objekts
 const ArtistRepository = require('../src/ArtistRepository');
-// Einbinden der Assertion-Bibliothek
 const assert = require("assert");
+
 describe('ArtistRepository', () => {
   describe('#add()', () => {
     it('should add the artist and increase the number of all artists',

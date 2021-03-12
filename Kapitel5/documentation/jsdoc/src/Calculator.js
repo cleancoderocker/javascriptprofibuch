@@ -13,7 +13,7 @@ function Calculator() {
      * @param {Number} y Zahl 2
      * @return {Number} Liefert das Ergebnis der Addition von x und y.
      */
-    this.add(x, y) {
+    this.add = function(x,y) {
         return x + y;
     }
 }

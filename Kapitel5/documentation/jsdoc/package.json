@@ -1,0 +1,13 @@
+{
+  "name": "esdoc-examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Philip Ackermann",
+  "license": "MIT",
+  "devDependencies": {
+    "esdoc": "^1.0.4",
+    "esdoc-standard-plugin": "^1.0.0"
+  }
+}
