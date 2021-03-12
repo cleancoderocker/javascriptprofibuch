@@ -1,6 +1,3 @@
-/**
- * Created by philipackermann on 09.06.14.
- */
 function ArtistRepository() {
     this.artists = [];
 };

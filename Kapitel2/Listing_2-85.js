@@ -1,9 +1,7 @@
-function eineFunktion(callback) {
-// hier weiterer Code
-    callback();
-// hier weiterer Code
+function aFunction(callback) {
+  // hier weiterer Code
+  console.log('Vor Callback');
+  callback();
+  console.log('Nach Callback');
+  // hier weiterer Code
 }
-function nochEineFunktion() {
-    console.log("nochEineFunktion")
-}
-eineFunktion(nochEineFunktion);

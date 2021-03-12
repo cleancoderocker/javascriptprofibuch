@@ -1,13 +1,14 @@
-var person = {
-    name : 'Max',
-    nachname : 'Mustermann',
-    sprechen : function() {
-        console.log('Hallo');
-    }
-}
-person.name = 'Moritz';
-person['nachname'] = 'Tester';
-console.log(person.name); // Moritz
-console.log(person.nachname); // Tester
-person.sprechen(); // Hallo
-person['sprechen'](); // Hallo
+const person = {
+  firstName: 'Max',
+  lastName: 'Mustermann',
+  talk: function() {
+    console.log('Hallo');
+  }
+};
+
+person.firstName = 'Moritz';
+person['lastName'] = 'Tester';
+console.log(person.firstName); 	// Moritz
+console.log(person.lastName); 	// Tester
+person.talk(); 					// Hallo
+person[talk](); 				// Hallo

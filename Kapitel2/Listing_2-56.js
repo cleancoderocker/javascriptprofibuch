@@ -1,10 +1,18 @@
-var komposition3 = function() {
-    var funktionen = arguments;
-    return function() {
-        var args = arguments;
-        for (var i = funktionen.length; i-- > 0;) {
-            args = [funktionen[i].apply(this, args)];
-        }
-        return args[0];
-    };
-};
+function addFour(x) {
+  return x + 4;
+}
+function multiplyWithSeven(x) {
+  return x * 7;
+}
+const addFourThenMultiplyWithSeven = compositionWithContext(
+  multiplyWithSeven,
+  addFour
+);
+const multiplyWithSevenThenAddFour = compositionWithContext(
+  addFour,
+  multiplyWithSeven
+);
+console.log(addFourThenMultiplyWithSeven(2)); // 42
+console.log(multiplyWithSeven(addFour(2))); // 42
+console.log(multiplyWithSevenThenAddFour(2)); // 18
+console.log(addFour(multiplyWithSeven(2))); // 18

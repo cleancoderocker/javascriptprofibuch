@@ -1,13 +1,12 @@
-/* Funktioniert nur in ES6 */
-var interpreten = new Set();
-interpreten.add('Kyuss');
-interpreten.add('Kyuss');
-interpreten.add('Tool');
-interpreten.add('Monster Magnet');
-interpreten.add('Ben Harper');
-interpreten.add('Coldplay'); // Bitte nicht
-console.log(interpreten.size); // 5
-interpreten.delete('Coldplay');
-console.log(interpreten.size); // 4
-interpreten.clear();
-console.log(interpreten.size); // 0
+var map = {};
+map['Schlüssel 1'] = 'Wert 1';
+map['Schlüssel 2'] = 'Wert 2';
+var value1 = map['Schlüssel 1'];
+var value2 = map['Schlüssel 2'];
+console.log(value1); // Wert 1
+console.log(value2); // Wert 2
+for (var key in map) {
+  if (map.hasOwnProperty(key)) {
+    console.log(key);
+  }
+}

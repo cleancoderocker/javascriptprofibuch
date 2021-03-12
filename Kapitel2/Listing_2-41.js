@@ -1,4 +1,4 @@
-var interpreten = ['Kyuss', 'Dozer', 'Spiritual Beggars', 'Monster Magnet']
-interpreten.forEach(function(interpret, index, interpreten) {
-    console.log(interpret);
-});
+const artists = ['Kyuss', 'Dozer', 'Spiritual Beggars', 'Monster Magnet'];
+for (let i = 0, l = artists.length; i < l; i++) {
+  console.log(artists[i]);
+}

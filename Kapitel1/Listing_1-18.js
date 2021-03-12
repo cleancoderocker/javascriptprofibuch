@@ -1,3 +1,3 @@
-var addition = function(zahl1, zahl2) {
-    return zahl1 + zahl2;
+const add = function(number1, number2) {
+  return number1 + number2;
 };

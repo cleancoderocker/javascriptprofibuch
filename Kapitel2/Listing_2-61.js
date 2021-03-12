@@ -1,16 +1,13 @@
-var fibonacciMitCache = function() {
-    var cache = [0, 1];
-    var fibonacci = function(n) {
-        var result = cache[n];
-        if (typeof result !== 'number') {
-            console.log('Neuberechnung für: ' + n)
-            result = fibonacci(n - 1) + fibonacci(n - 2);
-            cache[n] = result;
-        }
-        return result;
-    };
-    return fibonacci;
-};
-var fibonacci = fibonacciMitCache();
-console.log(fibonacci(11));
-console.log(fibonacci(11));
+function counter(name) {
+  let i = 0;
+  return function() {
+    i++;
+    console.log(name + ': ' + i);
+  };
+}
+const counter1 = counter('Zähler 1');
+counter1(); // Zähler 1: 1
+counter1(); // Zähler 1: 2
+const counter2 = counter('Zähler 2');
+counter2(); // Zähler 2: 1
+counter2(); // Zähler 2: 2

@@ -1,4 +1,6 @@
-/* Funktioniert nur in ES6 */
-var bestOfStonerrock = ['Kyuss', 'QOTSA', 'Unida', 'Vista Chino'];
-let [platz1, platz2, platz3, platz4] = bestOfStonerrock;
-const [platz1, platz2, platz3, platz4] = bestOfStonerrock;
+const bestOfStonerrock = ['Kyuss', 'QOTSA', 'Unida', 'Vista Chino'];
+let position1 = '';
+let position2 = '';
+let position3 = '';
+let position4 = '';
+[position1, position2, position3, position4] = bestOfStonerrock;

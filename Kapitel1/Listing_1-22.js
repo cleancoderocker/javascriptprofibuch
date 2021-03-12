@@ -1,7 +1,7 @@
-function addiereAlle() {
-    var ergebnis = 0;
-    for(var i=0; i<arguments.length; i++) {
-        ergebnis += arguments[i];
-    }
-    return ergebnis;
+function addAll() {
+  let result = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    result += arguments[i];
+  }
+  return result;
 }

@@ -1,6 +1,5 @@
-var max = {
-    name: 'Max',
-    nachname: 'Mustermann'
-};
-console.log(max.__proto__); // Object {}
-console.log(Object.getPrototypeOf(max)); // Object {}
+const max = new Person('Max', 'Mustermann');
+// Aufruf der Objektmethode
+console.log(max.toString());
+// Aufruf der Klassenmethode
+console.log(Person.generateRandomNumber());

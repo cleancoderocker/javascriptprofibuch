@@ -1,6 +1,6 @@
-function gebeNamenAus() {
-    Array.prototype.forEach.apply(arguments, [function(argument) {
-        console.log(argument);
-    }]);
+function printNames() {
+  Array.prototype.forEach.call(arguments, function(argument) {
+    console.log(argument);
+  });
 }
-gebeNamenAus('Max', 'Moritz');
+printNames('Max', 'Moritz');

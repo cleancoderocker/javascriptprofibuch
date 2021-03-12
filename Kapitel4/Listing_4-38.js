@@ -1,13 +1,28 @@
-function erstellePerson(name, nachname, groesse, gewicht, geburtstag,
-                        geburtsmonat, geburtsjahr) {
-    return {
-        name: name,
-        nachname: nachname,
-        groesse: groesse,
-        gewicht: gewicht,
-        geburtstag: geburtstag,
-        geburtsmonat: geburtsmonat,
-        geburtsjahr: geburtsjahr
-    }
+function createPerson(
+  firstName,
+  lastName,
+  height,
+  weight,
+  dayOfBirth,
+  monthOfBirth,
+  yearOfBirth
+) {
+  return {
+    firstName: firstName,
+    lastName: lastName,
+    height: height,
+    weight: weight,
+    dayOfBirth: dayOfBirth,
+    monthOfBirth: monthOfBirth,
+    yearOfBirth: yearOfBirth
+  };
 }
-var person = erstellePerson(geburtsjahr=1979);
+var person = createPerson(
+  null, // Name
+  null, // Nachname
+  null, // Größe
+  null, // Gewicht
+  null, // Geburtstag
+  null, // Geburtsmonat
+  1956 	// Geburtsjahr
+);

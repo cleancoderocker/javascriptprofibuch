@@ -1,5 +1,3 @@
-function Album(titel) {
-    this.titel = titel;
+function Album(title) {
+  this.title = title;
 }
-var album = new Album('Sky Valley');
-console.log(album.titel); // Sky Valley

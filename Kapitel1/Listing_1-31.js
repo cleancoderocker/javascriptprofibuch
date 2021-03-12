@@ -1,8 +1,9 @@
-/* Funktioniert nur in Firefox */
-try {
-    throw new RangeError();
-} catch (error if error instanceof TypeError) {
-    console.log("TypeError");
-} catch (error if error instanceof RangeError) {
-    console.log("RangeError");
+console.log(checkAge(22)); // true
+console.log(checkAge(-22)); // Error: Alter darf nicht negativ sein
+function checkAge(age) {
+  if (age < 0) {
+    throw new Error('Alter darf nicht negativ sein.');
+  } else {
+    return true;
+  }
 }

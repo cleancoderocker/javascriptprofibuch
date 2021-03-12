@@ -1,7 +1,10 @@
 function Controller() {
-    var that = this;
-    var schaltflaeche = document.getElementById('ok');
-    schaltflaeche.addEventListener('click', function() {
-        that.handleOk(); // this bezieht sich auf das DOM-Element
-    });
+  var that = this;
+  var button = document.getElementById('ok');
+  button.addEventListener('click', function() {
+    // Funktioniert nicht: this bezieht sich auf das DOM-Element
+    // this.handleClick();
+    // Funktioniert: that bezieht sich auf die Controller-Instanz
+    that.handleClick();
+  });
 }

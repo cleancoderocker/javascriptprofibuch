@@ -1,10 +1,7 @@
-/* Funktioniert nur in ES6 */
-var interpreten = new Set();
-interpreten.add('Kyuss');
-interpreten.add('Kyuss');
-interpreten.add('Tool');
-interpreten.add('Monster Magnet');
-interpreten.add('Ben Harper');
-for (let interpret of interpreten) {
-    console.log(interpret);
-}
+var map = {};
+map['Schlüssel 1'] = 'Wert 1';
+map['Schlüssel 2'] = 'Wert 2';
+var value1 = map['Schlüssel 1'];
+var value2 = map['Schlüssel 2'];
+console.log(value1); // Wert 1
+console.log(value2); // Wert 2

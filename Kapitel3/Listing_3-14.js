@@ -1,12 +1,14 @@
-function Film(titel, produktionsjahr) {
-    this.titel = titel;
-    this.produktionsjahr = produktionsjahr;
+const max = {
+  firstName: 'Max',
+  lastName: 'Mustermann'
 };
-var spiderman = new Film('Spiderman', 2002);
-var starWars = new Film('Star Wars', 1977);
-console.log(spiderman.__proto__); // Film {}
-console.log(starWars.__proto__); // Film {}
-console.log(Object.getPrototypeOf(spiderman)); // Film {}
-console.log(Object.getPrototypeOf(starWars)); // Film {}
-console.log(spiderman.constructor); // function Film() {...}
-console.log(starWars.constructor); // function Film() {...}
+console.log(max.__proto__); // Object {}
+console.log(Object.getPrototypeOf(max)); // Object {}
+const maexchen = Object.create(max);
+maexchen.firstName = 'Maexchen';
+console.log(maexchen.__proto__);
+// Object {firstName: "Max", lastName: "Mustermann"}
+console.log(Object.getPrototypeOf(maexchen));
+// Object {firstName: "Max", lastName: "Mustermann"}
+console.log(maexchen.firstName); // Maexchen
+console.log(maexchen.lastName); // Mustermann

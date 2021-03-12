@@ -1,11 +1,12 @@
-var person = {
-    name : 'Max',
-    nachname : 'Mustermann',
-    sprechen : function() {
-        console.log('Hallo');
-    }
-}
-delete person.name;
-console.log(person.name); // Ausgabe: undefined
-delete person['nachname'];
-console.log(person.nachname); // Ausgabe: undefined
+const person = {
+  firstName: 'Max',
+  lastName: 'Mustermann',
+  talk: function() {
+    console.log('Hallo');
+  }
+};
+
+delete person.firstName;
+console.log(person.firstName); 	// Ausgabe: undefined
+delete person['lastName'];
+console.log(person.lastName); 	// Ausgabe: undefined

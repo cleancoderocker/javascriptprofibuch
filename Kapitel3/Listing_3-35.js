@@ -1,30 +1,32 @@
-var Mitarbeiter = (function() {
-    function Mitarbeiter(name, nachname, mitarbeiterID) {
-      var name = name;
-      var nachname = nachname;
-      var mitarbeiterID = mitarbeiterID;
-      this.getName = function () {
-        return name;
-      };
-      this.getNachname = function () {
-        return nachname;
-      };
-      this.getMitarbeiterID = function () {
-        return mitarbeiterID;
-      };
+function mixin(source, target) {
+  for (let property in source) {
+    if (source.hasOwnProperty(property)) {
+      target[property] = source[property];
     }
-    return Mitarbeiter;
-})();
-Mitarbeiter.prototype.print = function() {
-  return this.getName() + ' ' + this.getNachname() + ' (' + this.getMitarbeiterID() + ')';
-};
-var max = new Mitarbeiter('Max', 'Mustermann', 2345);
-max._name = 'Moritz';
-console.log(max.getName()); // Max
-console.log(max.getNachname()); // Mustermann
-console.log(max.getMitarbeiterID()); // 2345
+  }
+}
 
-var max = new Mitarbeiter('Max', 'Mustermann', 2345);
-var moritz = new Mitarbeiter('Moritz', 'Mustermann', 2346);
-console.log(max.getName()); // Max
-console.log(moritz.getName()); // Moritz
+function Person(firstName, lastName) {
+  this.firstName = firstName || '';
+  this.lastName = lastName || '';
+}
+Person.prototype.sayHello = function() {
+  console.log(this.firstName + ': "Hello"');
+};
+const max = new Person('Max', 'Mustermann');
+max.sayHello(); // Max: "Hello"
+// max.drive(); // Error: max.drive is not a function
+console.log(Person.prototype);
+// Person { sayHello: [Function] }
+function Driver() {}
+Driver.prototype.drive = function() {
+  console.log("I'm driving");
+};
+// Anwendung der mixin()-Funktion
+mixin(Driver.prototype, Person.prototype);
+var moritz = new Person('Moritz', 'Mustermann');
+moritz.sayHello(); // Moritz: "Hello"
+moritz.drive(); // I'm driving
+console.log(Person.prototype);
+// Person { sayHello: [Function], drive: [Function] }
+max.drive(); // I'm driving

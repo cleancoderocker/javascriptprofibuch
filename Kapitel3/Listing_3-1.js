@@ -1,7 +1,9 @@
-var max = {
-    name : 'Max',
-    nachname : 'Mustermann',
-    sagHallo : function() {
-        console.log('Hallo');
-    }
-}
+const max = {
+  firstName: 'Max',
+  lastName: 'Mustermann',
+  sayHello: function() {
+    console.log('Hallo');
+  }
+};
+console.log(max);
+// {firstName: "Max", lastName: "Mustermann", sayHello: ƒ}

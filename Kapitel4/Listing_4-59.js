@@ -1,23 +1,12 @@
-/* Funktioniert nur in ES6 */
-let interpreten = ['Kyuss', 'QOTSA', 'Ben Harper', 'Monster Magnet'];
-let interpretenWrapper = {}
-interpretenWrapper.interpreten = interpreten;
-interpretenWrapper[Symbol.iterator] = function() {
-    var interpreten = this.interpreten;
-    var zaehler = this.interpreten.length-1;
-// Rückgabe des Iterator-Objekts
-    return {
-        next: function(){
-            if (zaehler < 0) {
-                return {
-                    done: true
-                };
-            } else {
-                return {
-                    value: interpreten[zaehler--],
-                    done: false
-                };
-            }
-        }
-    }
-};
+const artists = ['Kyuss', 'QOTSA', 'Ben Harper', 'Monster Magnet'];
+const iterator = artists.entries();
+let artist = iterator.next();
+console.log(artist); // {value: [0, 'Kyuss'], done: false}
+artist = iterator.next();
+console.log(artist); // {value: [1, 'QOTSA'], done: false}
+artist = iterator.next();
+console.log(artist); // {value: [2, 'Ben Harper'], done: false}
+artist = iterator.next();
+console.log(artist); // {value: [3, 'Monster Magnet'], done: false}
+artist = iterator.next();
+console.log(artist); // {value: 'undefined', done: true}

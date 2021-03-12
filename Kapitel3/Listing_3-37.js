@@ -1,23 +1,12 @@
-function Person(name, nachname) {
-// Objekteigenschaften
-    this.name = name;
-    this.nachname = nachname;
-}
-// Statische Eigenschaft
-Person.MAX_GEWICHT = 2000;
-// Statische Methode
-Person.erstelleDummy = function() {
-    return new Person('Max', 'Mustermann');
-}
-// Objektmethoden
-Person.prototype.getName = function() {
-    return this.name;
-}
-Person.prototype.getNachname = function() {
-    return this.nachname;
-}
-console.log(Person.MAX_GEWICHT); // 2000
-console.log(Person.erstelleDummy());
-console.log(Person.getName()); // undefined, da Objektmethode
-console.log(new Person('Moritz', 'Mustermann').getName()); // Moritz
-console.log(new Person().erstelleDummy()); // undefined, da statische Methode
+const createClass = () =>
+  class {
+    print() {
+      console.log('Hello World');
+    }
+  };
+const Class1 = createClass();
+const instance1 = new Class1();
+instance1.print(); // Hello World
+const Class2 = createClass();
+const instance2 = new Class2();
+instance2.print(); // Hello World

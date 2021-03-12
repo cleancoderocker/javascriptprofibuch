@@ -1,13 +1,16 @@
-/* Funktioniert nur in ES6 */
-function erstellePerson(name = 'Max', nachname = 'Mustermann') {
-    return {
-        name: name,
-        nachname: nachname
-    }
+function createPerson(firstName, lastName) {
+  firstName = typeof firstName !== 'undefined' ? firstName : 'Max';
+  lastName = typeof lastName !== 'undefined' ? lastName : 'Mustermann';
+  return {
+    firstName: firstName,
+    lastName: lastName
+  };
 }
-var moritz = erstellePerson('Moritz');
-console.log(moritz.name); // 'Moritz'
-console.log(moritz.nachname); // 'Mustermann'
-var herrNull = erstellePerson(undefined, null);
-console.log(herrNull.name); // 'Max'
-console.log(herrNull.nachname); // null
+const ben = createPerson('Ben', 'Harper');
+// {name: "Ben", nachname: "Harper"}
+const moritz = createPerson('Moritz');
+// {name: "Moritz", nachname: "Mustermann"}
+const max = createPerson('Max');
+// {name: "Max", nachname: "Mustermann"}
+const herrSchuster = createPerson(undefined, 'Schuster');
+// {name: "Max", nachname: "Schuster"}

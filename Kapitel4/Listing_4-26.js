@@ -1,5 +1,7 @@
-function addiere(x,y,z) {
-    return x + y + z;
+function add(x, y, z) {
+  return x + y + z;
 }
-var zahlen = [2,3,4];
-addiere.apply(null, zahlen);
+
+var numbers = [2, 3, 4];
+var result = add.apply(null, numbers);
+console.log(result); // Ausgabe: 9

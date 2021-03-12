@@ -1,23 +1,31 @@
-function Mitarbeiter(name, nachname, mitarbeiterID) {
-    this._name = name;
-    this._nachname = nachname;
-    this._mitarbeiterID = mitarbeiterID;
+function extend(target, source) {
+  target = target || {};
+  for (let property in source) {
+    if (source.hasOwnProperty(property)) {
+      target[property] = source[property];
+    }
+  }
+  return target;
 }
-Mitarbeiter.prototype.getName = function() {
-    return this._name;
+
+const person = {
+  name: 'Max',
+  getName() {
+    return this.name;
+  }
 };
-Mitarbeiter.prototype.getNachname = function() {
-    return this._nachname;
+const dog = {
+  name: 'Bello',
+  bark() {
+    console.log('Wau wau');
+  }
 };
-Mitarbeiter.prototype.getMitarbeiterID = function() {
-    return this._mitarbeiterID;
+extend(dog, person);
+person.getName = function() {
+  console.log('getName() überschrieben');
+  return this.name;
 };
-Mitarbeiter.prototype.print = function() {
-  return this.getName() + ' ' + this.getNachname() + ' (' + this.getMitarbeiterID() + ')';
-};
-var max = new Mitarbeiter('Max', 'Mustermann', 2345);
-max._name = 'Moritz';
-console.log(max.getName()); // Moritz
-console.log(max.getNachname()); // Mustermann
-console.log(max.getMitarbeiterID()); // 2345
-console.log(max.print());
+console.log(person.getName());
+// Ausgabe erst 'getName() überschrieben', dann zweimal 'Max'
+console.log(dog.getName());
+// Ausgabe 'Bello'

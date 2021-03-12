@@ -1,5 +1,4 @@
-if (typeof String.prototype.startsWith !== 'function') {
-    String.prototype.startsWith = function (str){
-        return this.indexOf(str) === 0;
-    };
-}
+const lastName = 'Mustermann';
+console.log(lastName.endsWith('mann')); // true
+console.log(lastName.endsWith('mann', 6)); // false
+console.log(lastName.endsWith('Muster', 6)); // true

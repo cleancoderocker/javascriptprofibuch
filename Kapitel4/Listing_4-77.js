@@ -1,7 +1,16 @@
-/* Funktioniert nur in ES6 */
-var anzahlAlben = new Map();
-anzahlAlben.set('Kyuss', 4);
-anzahlAlben.set('Tool', 6);
-anzahlAlben.set('Monster Magnet', 8);
-anzahlAlben.set('Ben Harper', 9);
-console.log(anzahlAlben.get('Kyuss'));
+const profiler = {
+  counter: 0,
+  get(proxy, name) {
+    this.counter++;
+    return proxy[name];
+  },
+  getCounter() {
+    return this.counter;
+  }
+};
+const person = new Proxy({}, profiler);
+person.firstName = 'Max';
+for (let i = 0; i < 9; i++) {
+  console.log(person.firstName);
+}
+console.log(profiler.getCounter()); // Ausgabe: 9

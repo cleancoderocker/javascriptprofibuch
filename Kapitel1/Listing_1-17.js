@@ -1,3 +1,3 @@
-var addition = function additionsFunktion(zahl1, zahl2) { 1
-    return zahl1 + zahl2;
+const add = function addFunction(number1, number2) {
+  return number1 + number2;
 };

@@ -1,11 +1,7 @@
-var max = {
-    name : 'Max',
-    nachname : 'Mustermann',
-    sagHallo : function() {
-        console.log('Hallo');
-    },
-    haustier : {
-        name : 'Bello',
-        typ: 'Hund'
-    }
-}
+const max = {
+  firstName: 'Max',
+  lastName: 'Mustermann',
+  sayHello() {
+    console.log('Hallo');
+  }
+};

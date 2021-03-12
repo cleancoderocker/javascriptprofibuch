@@ -1,3 +1,2 @@
-/* Funktioniert nur in ES6 */
-var einArray = [];
-var [x = 4711] = einArray;
+const bestOfStonerrock = ['Kyuss', 'QOTSA', 'Unida', 'Vista Chino'];
+const [position1, position2, position3, position4] = bestOfStonerrock;

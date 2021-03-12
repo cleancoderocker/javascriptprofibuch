@@ -1,8 +1,17 @@
-function erstEinsDannZwei() {
-    console.log(1);
-    erstEinsDannZwei = function() {
-        console.log(2);
+function asyncFunction(callback) {
+  setTimeout(function() {
+    const result = 4711; // Hier normalerweise mehr Code
+    if (result < 0) {
+      callback(new Error('Ergebnis kleiner 0'), result);
+    } else {
+      callback(null, result);
     }
+  }, 2000);
 }
-erstEinsDannZwei(); // Ausgabe: 1
-erstEinsDannZwei(); // Ausgabe: 2
+asyncFunction((error, result) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log(result);
+  }
+});

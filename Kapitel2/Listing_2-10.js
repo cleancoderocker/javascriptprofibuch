@@ -1,19 +1,14 @@
-function operationenContainer(x, y) {
-    var addition = function(x, y) {
-        return x + y;
-    }
-    var subtraktion = function(x, y) {
-        return x - y;
-    }
-    var multiplikation = function(x, y) {
-        return x * y;
-    }
-    var division = function(x, y) {
-        return x / y;
-    }
-    console.log(addition(x, y));
-    console.log(subtraktion(x, y));
-    console.log(multiplikation(x, y));
-    console.log(division(x, y));
+function operationFactory(name) {
+  switch (name) {
+    case 'add':
+      return (x, y) => x + y;
+    case 'subtract':
+      return (x, y) => x - y;
+    case 'multiply':
+      return (x, y) => x * y;
+    case 'divide':
+      return (x, y) => x / y;
+    default:
+      return () => NaN;
+  }
 }
-operationenContainer(2,2);

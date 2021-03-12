@@ -1,6 +1,5 @@
-"use strict";
-var name = "globaler Name";
-function getNameGlobal() {
-    return this.name;
+firstName = 'globaler Name';
+function getFirstNameGlobal() {
+  return this.firstName;
 }
-// console.log(getNameGlobal()); // Fehler: this ist nicht definiert
+console.log(getFirstNameGlobal()); // Ausgabe: globaler Name

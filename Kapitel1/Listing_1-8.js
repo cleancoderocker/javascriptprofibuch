@@ -1,16 +1,12 @@
-var ganzzahl = 4;
-var fließkommazahl = 4.4;
-var string = 'Hallo';
-var boolean = true;
-var ganzzahlObjekt = new Number(4);
-var fließkommazahlObjekt = new Number(4.4);
-var stringObjekt = new String('Hallo');
-var booleanObjekt = new Boolean(true);
-console.log(typeof ganzzahl); // number
-console.log(typeof ganzzahlObjekt); // object
-console.log(typeof fließkommazahl); // number
-console.log(typeof fließkommazahlObjekt); // object
-console.log(typeof string); // string
-console.log(typeof stringObjekt); // object
-console.log(typeof boolean); // boolean
-console.log(typeof booleanObjekt); // object
+let aNumber = 4;
+let anotherNumber = 4.4;
+let aString = 'Hallo';
+let aBoolean = true;
+console.log(typeof aNumber); 				// number
+console.log(typeof aNumberObject); 			// object
+console.log(typeof anotherNumber); 			// number
+console.log(typeof anotherNumberObject); 	// object
+console.log(typeof aString); 				// string
+console.log(typeof aStringObject); 			// object
+console.log(typeof aBoolean); 				// boolean
+console.log(typeof aBooleanObject);			// object

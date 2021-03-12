@@ -1,10 +1,8 @@
-function volumen(x, y, z) {
-    return x * y * z;
+function volume(x, y, z) {
+  return x * y * z;
 }
-function volumenX5(y, z) {
-    return volumen(5, y, z);
-}
-console.log(volumenX5(2, 2));
-console.log(volumenX5(3, 3));
-console.log(volumenX5(4, 4));
-console.log(volumenX5(5, 5));
+const volumeX = 5;
+console.log(volume(volumeX, 2, 2));
+console.log(volume(volumeX, 3, 3));
+console.log(volume(volumeX, 4, 4));
+console.log(volume(volumeX, 5, 5));

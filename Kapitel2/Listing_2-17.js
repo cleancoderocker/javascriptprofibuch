@@ -1,13 +1,6 @@
-function getNameGlobal() {
-    return this.name;
+'use strict';
+const firstName = 'globaler Name';
+function getFirstNameGlobal() {
+  return this.firstName;
 }
-var person2 = {
-    name : 'Moritz',
-    getName : getNameGlobal
-}
-var wuestenrockKoenige = {
-    name : 'Kyuss',
-    getName : getNameGlobal
-}
-console.log(person2.getName()); // Ausgabe: Moritz
-console.log(wuestenrockKoenige.getName()); // Ausgabe: Kyuss
+console.log(getFirstNameGlobal()); // Fehler: this ist nicht definiert

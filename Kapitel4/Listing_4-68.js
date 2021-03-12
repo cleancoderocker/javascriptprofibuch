@@ -1,26 +1,10 @@
-/* Funktioniert nur in ES6 */
-function asynchroneFunktion() {
-    var promise = new Promise(
-        function(resolve, reject) {
-            window.setTimeout(
-                function() {
-                    var ergebnis = 4711; // hier normalerweise asynchrone Berechnung
-                    if(ergebnis < 4000) {
-                        reject('Ergebnis kleiner als 4000');
-                    } else {
-                        resolve(ergebnis);
-                    }
-                }, Math.random() * 2000);
-            }
-        );
-    );
-    return promise;
+function* counter() {
+  let counter = 0;
+  while (true) {
+    counter++;
+    const reset = yield counter;
+    if (reset === true) {
+      counter = 0;
+    }
+  }
 }
-asynchroneFunktion().then(
-    function(ergebnis) {
-        console.log(ergebnis);
-    },
-    function(fehler) {
-        console.error(fehler);
-    },
-);

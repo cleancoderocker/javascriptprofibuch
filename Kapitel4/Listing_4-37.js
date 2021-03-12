@@ -1,14 +1,15 @@
-function erstellePerson(name, nachname, groesse, gewicht, geburtstag,
-                        geburtsmonat, geburtsjahr) {
-    return {
-        name: name,
-        nachname: nachname,
-        groesse: groesse,
-        gewicht: gewicht,
-        geburtstag: geburtstag,
-        geburtsmonat: geburtsmonat,
-        geburtsjahr: geburtsjahr
-    }
+function createPerson(config) {
+  return {
+    firstName: config.firstName,
+    lastName: config.lastName,
+    height: personenDaten.height,
+    weight: personenDaten.weight,
+    dayOfBirth: personenDaten.dayOfBirth,
+    monthOfBirth: personenDaten.monthOfBirth,
+    yearOfBirth: personenDaten.yearOfBirth
+  };
 }
-var person = erstellePerson(name='Max', nachname='Mustermann', groesse=180,
-    gewicht=79, geburtstag=2, geburtsmonat=4, geburtsjahr=1956);
+
+var person = createPerson({
+  yearOfBirth: 1956
+});

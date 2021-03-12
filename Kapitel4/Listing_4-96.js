@@ -1,8 +1,7 @@
-/* Funktioniert nur in ES6 */
-function quadrat() {
-    return Array.from(arguments, function(element) {
-        return element * element;
-    });
-}
-var quadrate = quadrat(1, 2, 3, 4, 5, 6, 7, 8);
-console.log(quadrate); // [1, 4, 9, 16, 25, 36, 49, 64]
+// Anlegen eines Arrays der Länge 8
+const numbers = new Array(8);
+// Füllen der ersten vier Positionen mit dem Wert 1
+numbers.fill(1, 0, 4);
+// Füllen aller Positionen ab Index 4 mit dem Wert 2
+numbers.fill(2, 4);
+console.log(numbers); // [1, 1, 1, 1, 2, 2, 2, 2]

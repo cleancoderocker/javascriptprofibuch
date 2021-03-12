@@ -1,6 +1,6 @@
 var Logger = {
-    info: function(meldung) {
-        console.log(meldung);
-    }
-}
+  info: function(message) {
+    console.log(message);
+  }
+};
 Logger.info('Tests');

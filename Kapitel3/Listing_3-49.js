@@ -1,13 +1,12 @@
-var ValidatorModul = ValidatorModul || (function () {
-        var format = 'HTML5';
-        return {
-            validiere: function() {
-                console.log('Validierung gestartet: ' + format);
-// Aufruf einer anderen Methode im selben Modul
-                ValidatorModul.validierungBeendet();
-            },
-            validierungBeendet: function() {
-                console.log('Validierung beendet: ' + format); }
-        }
-    })();
-ValidatorModul.validiere();
+class Employee {
+  constructor(firstName, lastName, id) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.id = id;
+  }
+}
+
+const max = new Employee('Max', 'Mustermann', 2345);
+console.log(max.firstName); // Max
+console.log(max.lastName); // Mustermann
+console.log(max.id); // 2345

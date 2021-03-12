@@ -1,17 +1,12 @@
-var _ = {}; // Platzhalter
-function partialMitPlatzhaltern(funktion /*, parameter...*/) {
-    var parameterGebunden = Array.prototype.slice.call(arguments, 1);
-    return function() {
-        var i,
-            parameter = [],
-            parameterUngebunden = Array.prototype.slice.call(arguments, 0);
-        for(i=0; i<parameterGebunden.length; i++) {
-            if(parameterGebunden[i] !== _) {
-                parameter[i] = parameterGebunden[i];
-            } else {
-                parameter[i] = parameterUngebunden.shift();
-            }
-        }
-        return funktion.apply(this, parameter.concat(parameterUngebunden));
-    };
-};
+function partialRight(aFunction /*, parameters...*/) {
+  const parametersBound = Array.prototype.slice.call(arguments, 1);
+  return function() {
+    const parametersUnbound = Array.prototype.slice.call(arguments);
+    return aFunction.apply(this, parametersUnbound.concat(parametersBound));
+  };
+}
+const volumeZ5 = partialRight(volume, 5);
+console.log(volumeZ5(2, 2)); // 20
+console.log(volumeZ5(3, 3)); // 45
+console.log(volumeZ5(4, 4)); // 80
+console.log(volumeZ5(5, 5)); // 125

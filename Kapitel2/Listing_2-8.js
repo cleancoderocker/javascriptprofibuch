@@ -1,29 +1,34 @@
-function operationenFabrik(name) {
-    switch(name) {
-        case 'addition': return function(x, y) {
-            return x + y;
-        }
-        case 'subtraktion': return function(x, y) {
-            return x - y;
-        }
-        case 'multiplikation': return function(x, y) {
-            return x * y;
-        }
-        case 'division': return function(x, y) {
-            return x / y;
-        }
-        default: return function() {
-            return NaN;
-        }
-    }
+function operationFactory(name) {
+  switch (name) {
+    case 'add':
+      return function(x, y) {
+        return x + y;
+      };
+    case 'subtract':
+      return function(x, y) {
+        return x - y;
+      };
+    case 'multiply':
+      return function(x, y) {
+        return x * y;
+      };
+    case 'divide':
+      return function(x, y) {
+        return x / y;
+      };
+    default:
+      return function() {
+        return NaN;
+      };
+  }
 }
-var addition = operationenFabrik('addition');
-console.log(addition(2, 2));
-var subtraktion = operationenFabrik('subtraktion');
-console.log(subtraktion(2, 2));
-var multiplikation = operationenFabrik('multiplikation');
-console.log(multiplikation(2, 2));
-var division = operationenFabrik('division');
-console.log(division(2, 2));
-var nichts = operationenFabrik('nichts');
-console.log(nichts(2, 2));
+const add = operationFactory('add');
+console.log(add(2, 2)); // Ausgabe: 4
+const subtract = operationFactory('subtract');
+console.log(subtract(2, 2)); // Ausgabe: 0
+const multiply = operationFactory('multiply');
+console.log(multiply(2, 2)); // Ausgabe: 4
+const divide = operationFactory('divide');
+console.log(divide(2, 2)); // Ausgabe: 1
+const unknown = operationFactory('unknown');
+console.log(unknown(2, 2)); // Ausgabe: NaN

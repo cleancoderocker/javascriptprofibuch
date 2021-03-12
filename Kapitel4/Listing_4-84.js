@@ -1,22 +1,12 @@
-/* Funktioniert nur in ES6 */
-class Person {
-    constructor(vorname, nachname) {
-        this.vorname = vorname;
-        this.nachname = nachname;
-    }
-// Objektmethode
-    toString() {
-        return this.vorname + ' ' + this.nachname;
-    }
-// Statische Methode
-    static beispiel() {
-        return 4711;
-    }
-}
-var max = new Person('Max', 'Mustermann');
-class Mitarbeiter extends Person {
-    constructor(vorname, nachname, mitarbeiterID) {
-        super(vorname, nachname);
-        this.mitarbeiterID = mitarbeiterID;
-    }
-}
+const artists = new Set();
+artists.add('Kyuss');
+artists.add('Kyuss');
+artists.add('Tool');
+artists.add('Monster Magnet');
+artists.add('Ben Harper');
+artists.add('Coldplay'); // Bitte nicht
+console.log(artists.size); // Ausgabe: 5
+artists.delete('Coldplay'); // Schon besser
+console.log(artists.size); // Ausgabe: 4
+artists.clear();
+console.log(artists.size); // Ausgabe: 0

@@ -1,6 +1,6 @@
-/* Funktioniert nur in ES6 */
-function addiere(x,y,z) {
-    return x + y + z;
+function add(x, y, z) {
+  return x + y + z;
 }
-var zahlen = [2,3,4];
-addiere(...zahlen);
+const numbers = [2, 3, 4];
+const result = add(...numbers);
+console.log(result); // Ausgabe: 9

@@ -1,5 +1,4 @@
-/* Funktioniert nur in ES6 */
-var person = { name: 'Max', nachname: 'Mustermann' };
-var mitarbeiter = { id: 4711 }
-var maxDerMitarbeiter = Object.assign(person, mitarbeiter);
-console.log(maxDerMitarbeiter);
+const lastName = 'Mustermann';
+console.log(lastName.startsWith('Muster')); // true
+console.log(lastName.startsWith('Muster', 6)); // false
+console.log(lastName.startsWith('mann', 6)); // true

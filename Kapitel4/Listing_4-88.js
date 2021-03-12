@@ -1,9 +1,5 @@
-function extend(ziel, quelle) {
-    ziel = ziel || {};
-    for(var eigenschaft in quelle) {
-        if(quelle.hasOwnProperty(eigenschaft)) {
-            ziel[eigenschaft] = quelle[eigenschaft];
-        }
-    }
-    return ziel;
+if (typeof String.prototype.startsWith !== 'function') {
+  String.prototype.startsWith = function(str) {
+    return this.substring(0, str.length) === str;
+  };
 }
